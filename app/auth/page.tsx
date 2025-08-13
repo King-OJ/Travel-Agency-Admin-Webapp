@@ -6,8 +6,9 @@ import {
   CardContent,
   CardFooter,
   CardHeader,
-  CardTitle,
 } from "@/components/ui/card";
+import LogoAndTitle from "@/components/LogoAndTitle";
+import GoogleIcon from "@/icons/google.svg";
 
 function Auth() {
   return (
@@ -22,38 +23,21 @@ function Auth() {
 
       <div className="absolute inset-0 bg-white/50 z-0"></div>
 
-      <div className="relative z-10 flex items-center justify-center h-full">
+      <div className="relative z-10 flex items-center justify-center h-full mx-4 md:mx-0">
         <Card className="w-full max-w-sm bg-white border-0 text-center shadow-2xl">
-          <CardHeader>
-            <CardTitle className="flex w-full justify-center items-center gap-2">
-              <Image
-                src={"/assets/icons/logo.svg"}
-                alt="tourvisto logo"
-                priority
-                className="h-auto w-auto"
-                height={0}
-                width={0}
-              />
-              <h1 className="text-xl font-bold font-serif">Tourvisto</h1>
-            </CardTitle>
+          <CardHeader className="flex justify-center">
+            <LogoAndTitle />
           </CardHeader>
           <CardContent className="flex flex-col gap-2">
             <h3 className="text-xl font-semibold">Admin Dashboard Login</h3>
-            <p className="text-sm font-figtree">
+            <p className="ash-color-text font-figtree">
               Sign in with Google to manage destinations, itenaries, and user
               activity with ease.
             </p>
           </CardContent>
           <CardFooter className="flex-col gap-2">
-            <Button className="w-full bg-blue-500 font-semibold text-white flex gap-2 items-center">
-              <Image
-                src={"/assets/icons/google.svg"}
-                alt="google logo"
-                priority
-                className="h-auto w-auto"
-                height={0}
-                width={0}
-              />
+            <Button className="w-full blue-color-bg font-semibold text-white flex gap-2 items-center">
+              <GoogleIcon className="!h-6 !w-6" />
               Sign in with Google
             </Button>
           </CardFooter>
