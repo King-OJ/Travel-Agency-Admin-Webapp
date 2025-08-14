@@ -1,62 +1,52 @@
 import { Button } from "@/components/ui/button";
-import React, { ComponentType } from "react";
-import IconUp from "@/icons/increment.svg";
-import IconDown from "@/icons/decrement.svg";
-import ArrowUp from "@/icons/arrow-up-green.svg";
-import ArrowDown from "@/icons/arrow-down-red.svg";
+import React from "react";
 import StatCard from "@/components/StatCard";
-import { Stat } from "@/utils/types";
+import { stats, trips } from "@/utils/mockdata";
+import TripsCard from "@/components/TripsCard";
+import { Card, CardHeader } from "@/components/ui/card";
+import UserChart from "@/components/UserChart";
 
 function Dashboard() {
-  const stats: Stat[] = [
-    {
-      title: "total users",
-      amount: 12450,
-      icon: IconUp,
-      arrow: ArrowUp,
-      trend: "up",
-    },
-    {
-      title: "total trips",
-      amount: 12450,
-      icon: IconDown,
-      arrow: ArrowDown,
-      trend: "down",
-    },
-    {
-      title: "active users today",
-      amount: 520,
-      icon: IconUp,
-      arrow: ArrowUp,
-      trend: "up",
-    },
-  ];
   return (
     <div className="space-y-10">
       <div className="flex justify-between items-center w-full">
         <div className="flex flex-col items-start gap-1">
           <h2 className="font-bold text-lg">Welcome Clement 👋</h2>
-          <p className="ash-color-text">
+          <p className="ash-text">
             Track activities, trends and popular destinations in real time
           </p>
         </div>
         <Button>Create a trip</Button>
       </div>
-      <ul className="flex gap-4 flex-col md:flex-row flex-wrap">
+      <ul className="gap-4 lg:gap-6 grid md:grid-cols-2 xl:grid-cols-3">
         {stats.map((stat, index) => {
           return (
             <li key={index}>
               <StatCard
                 title={stat.title}
                 amount={stat.amount}
-                icon={stat.icon}
-                arrow={stat.arrow}
                 trend={stat.trend}
               />
             </li>
           );
         })}
       </ul>
+      <section className="space-y-6">
+        <h3 className="font-semibold">Trips</h3>
+        <ul className="gap-4 lg:gap-6 grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          {trips.map((trip) => {
+            return (
+              <li key={trip.id}>
+                <TripsCard trip={trip} />
+              </li>
+            );
+          })}
+        </ul>
+      </section>
+
+      <section className="grid md:grid-cols-2 gap-4 lg:gap-6">
+        <UserChart />
+      </section>
     </div>
   );
 }

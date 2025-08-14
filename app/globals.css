@@ -11,6 +11,13 @@
     --color-blue: #256ff1;
     --color-green: #027a48;
     --color-red: #b42318;
+    --color-light-green: #ecfdf3;
+    --color-light-purple: #f3f0fb;
+    --color-purple: #6941c6;
+    --color-soft-lightblue: #f0f9ff;
+    --color-lightblue: #026aa2;
+    --color-soft-lightpurple: #f8f9fc;
+    --color-lightpurple: #363f72;
   }
 
   body {
@@ -19,19 +26,39 @@
 }
 
 @layer utilities {
-  .ash-color-text {
+  .ash-text {
     color: var(--color-ashes);
   }
 
-  .green-color-text {
+  .lightgreen-bg {
+    background-color: var(--color-light-green);
+  }
+
+  .lightpurple-bg {
+    background-color: var(--color-light-purple);
+  }
+
+  .purple-text {
+    color: var(--color-purple);
+  }
+
+  .lightblue-text {
+    color: var(--color-lightblue);
+  }
+
+  .lightblue-bg {
+    color: var(--color-soft-lightblue);
+  }
+
+  .green-text {
     color: var(--color-green);
   }
 
-  .red-color-text {
+  .red-text {
     color: var(--color-red);
   }
 
-  .blue-color-bg {
+  .blue-bg {
     background-color: var(--color-blue);
   }
 }

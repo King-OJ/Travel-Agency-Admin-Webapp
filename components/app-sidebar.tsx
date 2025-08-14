@@ -11,7 +11,7 @@ export function AppSidebar() {
   const pathname = usePathname();
 
   return (
-    <aside className="bg-white h-screen max-w-[250px] w-full  ">
+    <aside className="bg-white h-screen w-64 sticky top-0 z-50 ">
       <div className="py-10 flex flex-col gap-10 h-full">
         <div className="px-6">
           <LogoAndTitle />
@@ -24,14 +24,14 @@ export function AppSidebar() {
               <li
                 key={id}
                 className={`${
-                  isCurrentPath ? "text-white" : "ash-color-text"
+                  isCurrentPath ? "text-white" : "ash-text"
                 } transition duration-150`}
               >
                 <Link
                   href={href}
                   className={`${
                     isCurrentPath
-                      ? "blue-color-bg text-white"
+                      ? "blue-bg text-white"
                       : "hover:bg-[#f9fbfc] hover:shadow-2xs"
                   } w-full flex items-center gap-2 px-4 py-4 rounded-lg transition duration-150`}
                 >
@@ -57,9 +57,7 @@ export function AppSidebar() {
 
               <div className="flex flex-col items-start">
                 <h4 className="font-semibold text-sm">Clement Ojiguo</h4>
-                <p className="text-xs ash-color-text font-medium">
-                  dummy@gmail.com
-                </p>
+                <p className="text-xs ash-text font-medium">dummy@gmail.com</p>
               </div>
             </div>
             <LogoutIcon />
