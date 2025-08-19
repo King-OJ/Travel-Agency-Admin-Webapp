@@ -14,3 +14,16 @@ export type Trip = {
   tags: string[];
   price: number;
 };
+
+export type LatestUser = {
+  name: string;
+  imgUrl: string;
+  itenaries: number;
+};
+
+export type LatestTrips = {
+  name: string;
+  imgUrl: string;
+  fromDate: string;
+  toDate: string;
+};

@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardContent, CardHeader } from "./ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Stat } from "@/utils/types";
 import IconUp from "@/icons/increment.svg";
 import IconDown from "@/icons/decrement.svg";
@@ -9,7 +9,9 @@ import ArrowDown from "@/icons/arrow-down-red.svg";
 function StatCard({ title, amount, trend }: Stat) {
   return (
     <Card className="border-0 shadow-xl bg-white">
-      <CardHeader className="font-medium capitalize">{title}</CardHeader>
+      <CardHeader>
+        <CardTitle className="capitalize">{title}</CardTitle>
+      </CardHeader>
       <CardContent className="flex gap-4 items-end">
         <div className="space-y-4">
           <h2 className="font-bold text-xl">{amount}</h2>

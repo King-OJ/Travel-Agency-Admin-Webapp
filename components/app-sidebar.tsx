@@ -2,65 +2,78 @@
 
 import LogoAndTitle from "./LogoAndTitle";
 import { sidebarItems } from "@/utils/constants";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 import LogoutIcon from "@/icons/logout.svg";
 import Image from "next/image";
+import { useState } from "react";
+import SidebarItem from "./SidebarItem";
+import { cn } from "@/lib/utils";
 
 export function AppSidebar() {
   const pathname = usePathname();
+  const [collapsed, setCollapsed] = useState(true);
 
   return (
-    <aside className="bg-white h-screen w-64 sticky top-0 z-50 ">
-      <div className="py-10 flex flex-col gap-10 h-full">
-        <div className="px-6">
-          <LogoAndTitle />
-        </div>
+    <aside
+      onMouseEnter={() => collapsed && setCollapsed(false)}
+      onMouseLeave={() => !collapsed && setCollapsed(true)}
+      className={cn(
+        "bg-white h-screen sticky top-0 z-50 transition-all duration-300 ease-in-out",
+        collapsed ? "w-20" : "w-64"
+      )}
+    >
+      <div className="py-10 flex flex-col gap-10 h-full px-4">
+        <LogoAndTitle collapsed={collapsed} />
 
-        <ul className="flex-1 gap-4 flex flex-col px-6">
-          {sidebarItems.map(({ id, icon: Icon, label, href }) => {
-            const isCurrentPath = pathname.includes(href);
+        <nav className="flex-1 gap-8 flex flex-col mt-10 ">
+          {sidebarItems.map(({ id, icon, label, href }) => {
+            const isActivePath = pathname.includes(href);
             return (
-              <li
+              <SidebarItem
                 key={id}
-                className={`${
-                  isCurrentPath ? "text-white" : "ash-text"
-                } transition duration-150`}
-              >
-                <Link
-                  href={href}
-                  className={`${
-                    isCurrentPath
-                      ? "blue-bg text-white"
-                      : "hover:bg-[#f9fbfc] hover:shadow-2xs"
-                  } w-full flex items-center gap-2 px-4 py-4 rounded-lg transition duration-150`}
-                >
-                  <Icon />
-                  {label}
-                </Link>
-              </li>
+                collapsed={collapsed}
+                icon={icon}
+                label={label}
+                href={href}
+                isActivePath={isActivePath}
+              />
             );
           })}
-        </ul>
-        <div className="">
-          <button className="p-4 flex gap-4 items-center hover:cursor-pointer hover:bg-[#f9fbfc] hover:rounded-lg hover:shadow-2xs transition duration-150">
-            <div className="flex items-center gap-2">
-              <div className="h-10 w-10">
-                <Image
-                  src="/assets/images/profilepic.jpg"
-                  width={50}
-                  height={50}
-                  alt="profile pic"
-                  className="rounded-full overflow-hidden object-cover h-full w-full"
-                />
-              </div>
+        </nav>
+        <div
+          className={cn(
+            "flex items-center transition-all duration-300",
+            collapsed ? "justify-center" : "justify-start"
+          )}
+        >
+          <button
+            className={cn(
+              "flex p-2 items-center hover:cursor-pointer hover:bg-[#f9fbfc] hover:rounded-lg hover:shadow-2xs transition-all duration-300",
+              collapsed ? "justify-center" : "gap-2 justify-start"
+            )}
+          >
+            <div className="h-10 w-10">
+              <Image
+                src="/assets/images/profilepic.jpg"
+                width={50}
+                height={50}
+                alt="profile pic"
+                className="rounded-full overflow-hidden object-cover h-full w-full"
+              />
+            </div>
 
+            <div
+              className={cn(
+                "flex items-center transition-all duration-300",
+                collapsed ? "w-0 opacity-0 ml-0" : "w-auto opacity-100 ml-2"
+              )}
+            >
               <div className="flex flex-col items-start">
                 <h4 className="font-semibold text-sm">Clement Ojiguo</h4>
                 <p className="text-xs ash-text font-medium">dummy@gmail.com</p>
               </div>
+              <LogoutIcon />
             </div>
-            <LogoutIcon />
           </button>
         </div>
       </div>
@@ -69,3 +82,24 @@ export function AppSidebar() {
 }
 
 export default AppSidebar;
+
+{
+  /* <div
+  key={id}
+  className={`${
+    isCurrentPath ? "text-white" : "ash-text"
+  } transition duration-150`}
+>
+  <Link
+    href={href}
+    className={`${
+      isCurrentPath
+        ? "blue-bg text-white"
+        : "hover:bg-[#f9fbfc] hover:shadow-2xs"
+    } w-full flex items-center gap-2 px-4 py-4 rounded-lg transition duration-150`}
+  >
+    <Icon />
+    {label}
+  </Link>
+</div>; */
+}

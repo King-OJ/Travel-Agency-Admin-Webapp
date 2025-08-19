@@ -1,4 +1,4 @@
-import { Stat, Trip } from "./types";
+import { LatestTrips, LatestUser, Stat, Trip } from "./types";
 
 export const stats: Stat[] = [
   {
@@ -50,5 +50,55 @@ export const trips: Trip[] = [
     imgUrl: "/assets/images/sample3.jpg",
     tags: ["Sports", "Adventurous"],
     price: 870,
+  },
+];
+
+export const latestUsers: LatestUser[] = [
+  {
+    name: "James Anderson",
+    imgUrl: "/assets/images/james.webp",
+    itenaries: 12,
+  },
+  {
+    name: "Michael Johnson",
+    imgUrl: "/assets/images/michael.webp",
+    itenaries: 21,
+  },
+  {
+    name: "David Brown",
+    imgUrl: "/assets/images/david.webp",
+    itenaries: 15,
+  },
+  {
+    name: "Orlando Diggs",
+    imgUrl: "/assets/images/james.webp",
+    itenaries: 26,
+  },
+];
+
+export const latestTrips: LatestTrips[] = [
+  {
+    name: "Lagos Island",
+    imgUrl: "/assets/images/sample1.jpg",
+    fromDate: "Jun 02",
+    toDate: "June 12",
+  },
+  {
+    name: "Port Harcourt Beach",
+    imgUrl: "/assets/images/sample2.jpg",
+    fromDate: "Jun 02",
+    toDate: "Jun 12",
+  },
+  {
+    name: "Calabar Carnival",
+    imgUrl: "/assets/images/sample3.jpg",
+    fromDate: "Jun 02",
+    toDate: "Jun 12",
+  },
+  {
+    name: "Eko Hotels",
+    imgUrl: "/assets/images/sample4.jpg",
+    fromDate: "Jun 02",
+    toDate: "Jun 12",
   },
 ];

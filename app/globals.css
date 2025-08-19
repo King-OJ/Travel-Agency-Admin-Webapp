@@ -26,6 +26,10 @@
 }
 
 @layer utilities {
+  .ash-bg {
+    background-color: var(--color-bg);
+  }
+
   .ash-text {
     color: var(--color-ashes);
   }

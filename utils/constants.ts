@@ -1,7 +1,6 @@
 import HomeIcon from "@/icons/home.svg";
 import UsersIcon from "@/icons/users.svg";
 import TripsIcon from "@/icons/itinerary.svg";
-import { AxisModel } from "@syncfusion/ej2-react-charts";
 
 export const sidebarItems = [
   {
@@ -44,11 +43,3 @@ export const interests = [
   "Shopping",
   "Local Experiences",
 ];
-
-export const userXAxis: AxisModel = { valueType: "Category", title: "Day" };
-export const userYAxis: AxisModel = {
-  minimum: 0,
-  maximum: 10,
-  interval: 2,
-  title: "Count",
-};

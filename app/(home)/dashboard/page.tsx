@@ -3,12 +3,14 @@ import React from "react";
 import StatCard from "@/components/StatCard";
 import { stats, trips } from "@/utils/mockdata";
 import TripsCard from "@/components/TripsCard";
-import { Card, CardHeader } from "@/components/ui/card";
-import UserChart from "@/components/UserChart";
+import UserGrowthChart from "@/components/UserGrowthChart";
+import TripTrendsChart from "@/components/TripTrendsChart";
+import LatestUser from "@/components/LatestUser";
+import LatestTrips from "@/components/LatestTrips";
 
 function Dashboard() {
   return (
-    <div className="space-y-10">
+    <div className="space-y-20">
       <div className="flex justify-between items-center w-full">
         <div className="flex flex-col items-start gap-1">
           <h2 className="font-bold text-lg">Welcome Clement 👋</h2>
@@ -44,8 +46,14 @@ function Dashboard() {
         </ul>
       </section>
 
-      <section className="grid md:grid-cols-2 gap-4 lg:gap-6">
-        <UserChart />
+      <section className="grid md:grid-cols-2 gap-4 lg:gap-6 items-start">
+        <UserGrowthChart />
+        <TripTrendsChart />
+      </section>
+
+      <section className="grid md:grid-cols-2 gap-4 lg:gap-6 items-start">
+        <LatestTrips />
+        <LatestUser />
       </section>
     </div>
   );
