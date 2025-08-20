@@ -57,6 +57,7 @@ export function AppSidebar() {
                 src="/assets/images/profilepic.jpg"
                 width={50}
                 height={50}
+                priority
                 alt="profile pic"
                 className="rounded-full overflow-hidden object-cover h-full w-full"
               />
@@ -82,24 +83,3 @@ export function AppSidebar() {
 }
 
 export default AppSidebar;
-
-{
-  /* <div
-  key={id}
-  className={`${
-    isCurrentPath ? "text-white" : "ash-text"
-  } transition duration-150`}
->
-  <Link
-    href={href}
-    className={`${
-      isCurrentPath
-        ? "blue-bg text-white"
-        : "hover:bg-[#f9fbfc] hover:shadow-2xs"
-    } w-full flex items-center gap-2 px-4 py-4 rounded-lg transition duration-150`}
-  >
-    <Icon />
-    {label}
-  </Link>
-</div>; */
-}

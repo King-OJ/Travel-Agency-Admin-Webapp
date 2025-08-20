@@ -43,3 +43,100 @@ export const interests = [
   "Shopping",
   "Local Experiences",
 ];
+
+export const tagStyles: Record<
+  string,
+  {
+    textColor: string;
+    bgColor: string;
+  }
+> = {
+  Mountains: {
+    textColor: "text-green-700",
+    bgColor: "bg-green-100",
+  },
+  City: {
+    textColor: "text-purple-700",
+    bgColor: "bg-purple-100",
+  },
+  "Solo Travel": {
+    textColor: "text-blue-700",
+    bgColor: "bg-blue-100",
+  },
+  Budget: {
+    textColor: "text-yellow-800",
+    bgColor: "bg-yellow-100",
+  },
+  Luxury: {
+    textColor: "text-indigo-700",
+    bgColor: "bg-indigo-100",
+  },
+  Beach: {
+    textColor: "text-cyan-700",
+    bgColor: "bg-cyan-100",
+  },
+  Sports: {
+    textColor: "text-orange-700",
+    bgColor: "bg-orange-100",
+  },
+  Adventurous: {
+    textColor: "text-red-700",
+    bgColor: "bg-red-100",
+  },
+  Romantic: {
+    textColor: "text-pink-700",
+    bgColor: "bg-pink-100",
+  },
+  Business: {
+    textColor: "text-gray-800",
+    bgColor: "bg-gray-200",
+  },
+  Adventure: {
+    textColor: "text-teal-700",
+    bgColor: "bg-teal-100",
+  },
+  Nature: {
+    textColor: "text-lime-700",
+    bgColor: "bg-lime-100",
+  },
+  Relaxation: {
+    textColor: "text-emerald-700",
+    bgColor: "bg-emerald-100",
+  },
+  Camping: {
+    textColor: "text-stone-700",
+    bgColor: "bg-stone-100",
+  },
+  "Eco-Friendly": {
+    textColor: "text-green-800",
+    bgColor: "bg-green-200",
+  },
+  Cultural: {
+    textColor: "text-amber-700",
+    bgColor: "bg-amber-100",
+  },
+  Nightlife: {
+    textColor: "text-fuchsia-700",
+    bgColor: "bg-fuchsia-100",
+  },
+  Retreat: {
+    textColor: "text-sky-700",
+    bgColor: "bg-sky-100",
+  },
+  Family: {
+    textColor: "text-rose-700",
+    bgColor: "bg-rose-100",
+  },
+  Hiking: {
+    textColor: "text-amber-700",
+    bgColor: "bg-amber-100", // Note: Tailwind doesn’t include `brown` by default
+  },
+  Viewpoints: {
+    textColor: "text-violet-700",
+    bgColor: "bg-violet-100",
+  },
+  Seaside: {
+    textColor: "text-sky-800",
+    bgColor: "bg-sky-100",
+  },
+};

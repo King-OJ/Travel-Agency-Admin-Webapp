@@ -18,9 +18,9 @@ function Dashboard() {
             Track activities, trends and popular destinations in real time
           </p>
         </div>
-        <Button>Create a trip</Button>
+        <Button className="rounded-full">Create a trip</Button>
       </div>
-      <ul className="gap-4 lg:gap-6 grid md:grid-cols-2 xl:grid-cols-3">
+      <ul className="gap-4 lg:gap-6 grid md:grid-cols-2 lg:grid-cols-3">
         {stats.map((stat, index) => {
           return (
             <li key={index}>

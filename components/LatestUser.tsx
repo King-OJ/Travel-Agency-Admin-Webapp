@@ -21,7 +21,7 @@ function LatestUser() {
       <CardContent>
         <Table>
           <TableHeader className="[&_tr]:border-0">
-            <TableRow className="ash-text uppercase text-xs">
+            <TableRow className="ash-text uppercase text-sm">
               <TableHead>Name</TableHead>
               <TableHead>Itenary Created</TableHead>
             </TableRow>
@@ -35,7 +35,7 @@ function LatestUser() {
                 } border-0`}
               >
                 <TableCell>
-                  <div className="flex items-center gap-2">
+                  <div className="flex items-center gap-4">
                     <div className="relative h-8 w-8 rounded-full overflow-hidden">
                       <Image src={entry.imgUrl} alt="profile pic" fill />
                     </div>
