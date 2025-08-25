@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import React from "react";
 import StatCard from "@/components/StatCard";
 import { stats, trips } from "@/utils/mockdata";
-import TripsCard from "@/components/TripsCard";
+import TripsCard from "@/components/TripCard";
 import UserGrowthChart from "@/components/UserGrowthChart";
 import TripTrendsChart from "@/components/TripTrendsChart";
 import LatestUser from "@/components/LatestUser";

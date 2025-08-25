@@ -104,7 +104,7 @@ export const latestTrips: LatestTrips[] = [
   },
 ];
 
-export const allTrips = [
+export const allTrips: Trip[] = [
   {
     id: 1,
     title: "Eko Hotels",

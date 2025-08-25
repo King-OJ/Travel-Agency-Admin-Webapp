@@ -1,14 +1,22 @@
 import React from "react";
-import TripsCard from "./TripsCard";
-import { allTrips } from "@/utils/mockdata";
+import TripCard from "./TripCard";
+import { Trip } from "@/utils/types";
 
-function TripsTable() {
+function TripsTable({
+  trips,
+  startIndex,
+  endIndex,
+}: {
+  trips: Trip[];
+  startIndex: number;
+  endIndex: number;
+}) {
   return (
-    <ul className="gap-4 lg:gap-6 grid md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4">
-      {allTrips.map((trip) => {
+    <ul className="gap-4 lg:gap-6 grid md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 pb-10">
+      {trips.slice(startIndex, endIndex).map((trip) => {
         return (
           <li key={trip.id}>
-            <TripsCard trip={trip} />
+            <TripCard trip={trip} />
           </li>
         );
       })}

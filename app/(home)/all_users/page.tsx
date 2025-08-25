@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import UsersTable from "@/components/UsersTable";
 import React from "react";
 import PlusIcon from "@/icons/plus.svg";
+import PaginationBtns from "@/components/PaginationBtns";
 
 function AllUsers() {
   return (

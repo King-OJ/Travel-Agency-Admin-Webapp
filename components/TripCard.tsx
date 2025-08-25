@@ -3,9 +3,8 @@ import React from "react";
 import { Badge } from "./ui/badge";
 import { Trip } from "@/utils/types";
 import { tagStyles } from "@/utils/constants";
-import { cn } from "@/lib/utils";
 
-function TripsCard({ trip }: { trip: Trip }) {
+function TripCard({ trip }: { trip: Trip }) {
   const { price, imgUrl, title, location, tags } = trip;
   return (
     <div className="shadow-xl overflow-hidden rounded-xl w-full">
@@ -50,4 +49,4 @@ function TripsCard({ trip }: { trip: Trip }) {
   );
 }
 
-export default TripsCard;
+export default TripCard;
