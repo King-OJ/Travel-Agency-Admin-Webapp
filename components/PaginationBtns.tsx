@@ -39,7 +39,7 @@ function PaginationBtns({
         </PaginationItem>
         <div className="flex items-center gap-1">
           {Array.from({ length: totalPages }, (_, i) => (
-            <PaginationItem>
+            <PaginationItem key={i}>
               <PaginationLink
                 onClick={(e) => {
                   e.preventDefault();
@@ -53,9 +53,9 @@ function PaginationBtns({
             </PaginationItem>
           ))}
 
-          <PaginationItem>
+          {/* <PaginationItem>
             <PaginationEllipsis />
-          </PaginationItem>
+          </PaginationItem> */}
         </div>
 
         <PaginationItem>
