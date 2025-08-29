@@ -1,5 +1,5 @@
 import { formatDate } from "@/lib/utils";
-import { LatestTrips, LatestUser, Stat, Trip } from "./types";
+import { LatestTrips, LatestUser, Stat, Tour, Trip } from "./types";
 
 export const stats: Stat[] = [
   {
@@ -427,5 +427,640 @@ export const allUsers = [
     itenaries: 15,
     dateJoined: formatDate("2023-03-18"),
     status: "user",
+  },
+];
+
+export const tours: Tour[] = [
+  {
+    id: 1,
+    title: "5-Day Nigerian Discovery: Lagos",
+    subtitle: "5-Day Nigeria Adventure",
+    features: "Cultural Heritage, Scenic Nature, and Local Cuisine",
+    price: 525.0,
+    location: "Lagos, Badagry, Lekki",
+    imgUrl: [
+      "/assets/images/sample1.jpg",
+      "/assets/images/sample2.jpg",
+      "/assets/images/sample3.jpg",
+    ],
+    tags: ["Cultural", "Beach", "Adventure", "Budget"],
+    description:
+      "Experience the pulse of Nigeria in 5 unforgettable days across Lagos, Badagry, and Lekki. Discover rich history in Badagry, relax on Lekki beaches, and dive into vibrant city life. 🏖️🎶",
+    noOfDays: 5,
+    plan: [
+      {
+        day1: {
+          event: "Arrival & Lekki Exploration",
+          activities: [
+            "Arrive at Murtala Muhammed Airport & check-in",
+            "Visit Lekki Conservation Centre",
+            "Dinner at local seafood spot",
+          ],
+        },
+        day2: {
+          event: "Badagry Heritage Tour",
+          activities: [
+            "Tour Badagry Slave Museum",
+            "Walk the Point of No Return trail",
+            "Cultural performance in the evening",
+          ],
+        },
+        day3: {
+          event: "City & Market Day",
+          activities: [
+            "Explore Balogun Market",
+            "Visit National Museum Lagos",
+            "Dinner with live music at Terra Kulture",
+          ],
+        },
+        day4: {
+          event: "Beach Day & Arts",
+          activities: [
+            "Relax at Elegushi Beach",
+            "Tour Nike Art Gallery",
+            "Street food tasting night",
+          ],
+        },
+        day5: {
+          event: "Departure",
+          activities: [
+            "Souvenir shopping in Lekki Arts Market",
+            "Depart for airport",
+          ],
+        },
+      },
+    ],
+    visitationTimes: [
+      "🌸 Dry Season (Nov–March): Best weather for sightseeing and cultural festivals.",
+      "🔥 Harmattan (Dec–Feb): Cool, dusty winds with clear skies.",
+      "🎉 December Holidays: Vibrant with festivals and concerts.",
+    ],
+  },
+
+  {
+    id: 2,
+    title: "5-Day Nigerian Discovery: Abuja",
+    subtitle: "5-Day Nigeria Adventure",
+    features: "Cultural Heritage, Scenic Nature, and Local Cuisine",
+    price: 490.0,
+    location: "Abuja, Aso Rock, Jabi Lake",
+    imgUrl: [
+      "/assets/images/sample4.jpg",
+      "/assets/images/sample5.jpg",
+      "/assets/images/sample6.jpg",
+    ],
+    tags: ["Nature", "Cultural", "Luxury", "Historical"],
+    description:
+      "Discover Nigeria’s capital with a blend of modern vibes, serene lakes, and iconic landmarks. Climb Aso Rock, cruise on Jabi Lake, and dine under the stars. 🌄🛶",
+    noOfDays: 5,
+    plan: [
+      {
+        day1: {
+          event: "Arrival in Abuja",
+          activities: [
+            "Check-in and relax at hotel",
+            "Evening stroll at Jabi Lake Mall",
+            "Dinner with live music",
+          ],
+        },
+        day2: {
+          event: "Nature & Hike Day",
+          activities: [
+            "Climb Aso Rock",
+            "Visit Millennium Park",
+            "Evening picnic at Jabi Lake",
+          ],
+        },
+        day3: {
+          event: "Cultural Immersion",
+          activities: [
+            "Visit Arts & Crafts Village",
+            "National Mosque & Ecumenical Centre tour",
+            "Taste northern cuisine at local restaurant",
+          ],
+        },
+        day4: {
+          event: "Adventure & Leisure",
+          activities: [
+            "Zuma Rock photo stop",
+            "Go karting or water sports at Jabi Park",
+            "Spa relaxation",
+          ],
+        },
+        day5: {
+          event: "Departure",
+          activities: ["Quick city shopping", "Airport transfer & goodbye"],
+        },
+      },
+    ],
+    visitationTimes: [
+      "🌸 Dry Season (Nov–March): Ideal for outdoor adventures.",
+      "🔥 Harmattan (Dec–Feb): Clear skies and cool air.",
+      "🌧 Rainy Season (April–October): Lush but humid.",
+    ],
+  },
+
+  {
+    id: 3,
+    title: "5-Day Nigerian Discovery: Calabar & Obudu",
+    subtitle: "5-Day Nigeria Adventure",
+    features: "Rainforest Escapes, Mountain Views, and Festive Culture",
+    price: 610.0,
+    location: "Calabar, Obudu, Tinapa",
+    imgUrl: [
+      "/assets/images/sample2.jpg",
+      "/assets/images/sample7.jpg",
+      "/assets/images/sample1.jpg",
+    ],
+    tags: ["Nature", "Adventure", "Luxury", "Cultural"],
+    description:
+      "Journey into Nigeria’s lush southeast. Ride cable cars in Obudu, relax at Tinapa Resort, and dance through Calabar’s carnival culture. 🌿⛰️",
+    noOfDays: 5,
+    plan: [
+      {
+        day1: {
+          event: "Arrival in Calabar",
+          activities: [
+            "Hotel check-in and rest",
+            "Evening walk by Calabar River",
+            "Dinner at Marina Resort",
+          ],
+        },
+        day2: {
+          event: "Obudu Mountain Adventure",
+          activities: [
+            "Drive to Obudu Cattle Ranch",
+            "Ride the cable car to mountain top",
+            "Bonfire & night under the stars",
+          ],
+        },
+        day3: {
+          event: "Nature & Wellness",
+          activities: [
+            "Visit waterfall and canopy walkway",
+            "Local spa session",
+            "Taste local Efik dishes",
+          ],
+        },
+        day4: {
+          event: "Cultural Day in Calabar",
+          activities: [
+            "Slave History Museum tour",
+            "Tinapa Free Zone shopping",
+            "Street performance or carnival rehearsal",
+          ],
+        },
+        day5: {
+          event: "Departure",
+          activities: ["Visit Calabar market", "Transfer to airport"],
+        },
+      },
+    ],
+    visitationTimes: [
+      "🎉 December Holidays: Calabar Carnival & festive events.",
+      "🌧 Rainy Season (April–October): Best for lush scenery.",
+      "🌸 Dry Season (Nov–March): Cooler, pleasant travel.",
+    ],
+  },
+  // Continuing from previous array...
+
+  {
+    id: 4,
+    title: "5-Day Nigerian Discovery: Kano & Katsina",
+    subtitle: "5-Day Nigeria Adventure",
+    features: "Ancient History, Culture, and Northern Architecture",
+    price: 470.0,
+    location: "Kano, Katsina, Zaria",
+    imgUrl: [
+      "/assets/images/sample3.jpg",
+      "/assets/images/sample8.jpg",
+      "/assets/images/sample4.jpg",
+    ],
+    tags: ["Historical", "Cultural", "Budget", "Adventure"],
+    description:
+      "Explore Nigeria’s ancient northern cities with their rich empires, mosques, and traditional arts. From the ancient city walls to centuries-old palaces, history breathes here. 🕌📜",
+    noOfDays: 5,
+    plan: [
+      {
+        day1: {
+          event: "Arrival in Kano",
+          activities: [
+            "Check into traditional guesthouse",
+            "Tour Kano City Walls",
+            "Dinner with Hausa music",
+          ],
+        },
+        day2: {
+          event: "Cultural Day",
+          activities: [
+            "Gidan Makama Museum visit",
+            "Dye pits and leather market tour",
+            "Tea and suya in Kurmi Market",
+          ],
+        },
+        day3: {
+          event: "Katsina Exploration",
+          activities: [
+            "Travel to Katsina",
+            "Visit Emir’s Palace and Gobarau Minaret",
+            "Try local delicacies",
+          ],
+        },
+        day4: {
+          event: "Zaria City Tour",
+          activities: [
+            "Explore Ahmadu Bello University campus",
+            "Visit Queen Amina’s Wall",
+            "Relaxing night at local hotel",
+          ],
+        },
+        day5: {
+          event: "Departure",
+          activities: ["Visit Zaria craft shops", "Head to airport"],
+        },
+      },
+    ],
+    visitationTimes: [
+      "🔥 Harmattan (Dec–Feb): Cool, dry and ideal for touring.",
+      "🌸 Dry Season (Nov–March): Great for open-air exploration.",
+      "🎉 December Holidays: Traditional festivals and events.",
+    ],
+  },
+
+  {
+    id: 5,
+    title: "5-Day Nigerian Discovery: Jos & Plateau State",
+    subtitle: "5-Day Nigeria Adventure",
+    features: "Cool Climate, Rock Formations, and Local Culture",
+    price: 510.0,
+    location: "Jos, Plateau, Riyom",
+    imgUrl: [
+      "/assets/images/sample5.jpg",
+      "/assets/images/sample1.jpg",
+      "/assets/images/sample6.jpg",
+    ],
+    tags: ["Nature", "Adventure", "Cultural", "Budget"],
+    description:
+      "Escape to the serene landscapes of Plateau State. Enjoy cool weather, rock formations, and a calm pace. A refreshing experience away from the heat. 🪨🌤️",
+    noOfDays: 5,
+    plan: [
+      {
+        day1: {
+          event: "Arrival in Jos",
+          activities: [
+            "Arrive via Jos Airport",
+            "City tour & Jos Wildlife Park",
+            "Dinner at Jos Club",
+          ],
+        },
+        day2: {
+          event: "Nature Day",
+          activities: [
+            "Hike around Riyom Rock",
+            "Visit Assop Falls",
+            "Picnic in the countryside",
+          ],
+        },
+        day3: {
+          event: "Cultural Day",
+          activities: [
+            "National Museum & Nok artifacts",
+            "Local village visit",
+            "Traditional dance performance",
+          ],
+        },
+        day4: {
+          event: "Adventure & Relaxation",
+          activities: [
+            "Horseback riding or biking trail",
+            "Craft shopping in Jos market",
+            "Bonfire & storytelling night",
+          ],
+        },
+        day5: {
+          event: "Departure",
+          activities: ["Breakfast & airport transfer"],
+        },
+      },
+    ],
+    visitationTimes: [
+      "🌸 Dry Season (Nov–March): Cool and ideal for hiking.",
+      "🎉 December Holidays: Calm, yet festive vibes.",
+      "🌧 Rainy Season (June–Sept): Green but muddy terrain.",
+    ],
+  },
+
+  {
+    id: 6,
+    title: "5-Day Nigerian Discovery: Ibadan & Oyo",
+    subtitle: "5-Day Nigeria Adventure",
+    features: "Colonial Charm, University Town, and Western Heritage",
+    price: 455.0,
+    location: "Ibadan, Oyo, Iseyin",
+    imgUrl: [
+      "/assets/images/sample7.jpg",
+      "/assets/images/sample3.jpg",
+      "/assets/images/sample2.jpg",
+    ],
+    tags: ["Cultural", "Historical", "Budget", "City"],
+    description:
+      "Experience Yoruba heartland with a blend of academia, ancient sites, and bustling markets. Climb Bower’s Tower and explore the old Oyo Empire. 🏛️📚",
+    noOfDays: 5,
+    plan: [
+      {
+        day1: {
+          event: "Arrival in Ibadan",
+          activities: [
+            "Check in near University of Ibadan",
+            "Visit Agodi Gardens",
+            "Evening food tour",
+          ],
+        },
+        day2: {
+          event: "Historical Ibadan",
+          activities: [
+            "Explore Mapo Hall",
+            "Climb Bower’s Tower",
+            "Shop at Dugbe Market",
+          ],
+        },
+        day3: {
+          event: "Oyo City Visit",
+          activities: [
+            "Day trip to Old Oyo National Park",
+            "Visit Alaafin's Palace",
+            "Picnic in Iseyin hills",
+          ],
+        },
+        day4: {
+          event: "Cultural Exploration",
+          activities: [
+            "Yoruba cultural center tour",
+            "Textile dyeing demonstration",
+            "Evening at cultural dance show",
+          ],
+        },
+        day5: {
+          event: "Departure",
+          activities: ["Visit Bodija Market", "Return trip"],
+        },
+      },
+    ],
+    visitationTimes: [
+      "🌸 Dry Season (Nov–March): Best time for outdoor activities.",
+      "🎉 December Holidays: Festivals and family gatherings.",
+      "🌧 Rainy Season (April–Oct): Heavy rains but vibrant markets.",
+    ],
+  },
+
+  {
+    id: 7,
+    title: "5-Day Nigerian Discovery: Enugu & Nsukka",
+    subtitle: "5-Day Nigeria Adventure",
+    features: "Coal City History, Hills, and Local Culture",
+    price: 490.0,
+    location: "Enugu, Nsukka, Awhum",
+    imgUrl: [
+      "/assets/images/sample8.jpg",
+      "/assets/images/sample6.jpg",
+      "/assets/images/sample5.jpg",
+    ],
+    tags: ["Historical", "Adventure", "Nature", "Cultural"],
+    description:
+      "Venture into southeastern Nigeria to explore coal mines, waterfalls, and the warm hospitality of the Igbo people. 🧗‍♂️⛲",
+    noOfDays: 5,
+    plan: [
+      {
+        day1: {
+          event: "Arrival in Enugu",
+          activities: [
+            "Hotel check-in and evening walk",
+            "Dinner with live highlife music",
+          ],
+        },
+        day2: {
+          event: "Hiking Day",
+          activities: [
+            "Climb Ngwo Pine Forest trail",
+            "Explore caves and waterfalls",
+            "Lunch at mountain top",
+          ],
+        },
+        day3: {
+          event: "Nsukka Visit",
+          activities: [
+            "UNN Art Museum tour",
+            "Explore town markets",
+            "Return to Enugu",
+          ],
+        },
+        day4: {
+          event: "Spiritual Retreat & Nature",
+          activities: [
+            "Awhum Waterfall and Monastery visit",
+            "Quiet afternoon meditation",
+            "Evening Igbo dance class",
+          ],
+        },
+        day5: {
+          event: "Departure",
+          activities: ["Breakfast and checkout"],
+        },
+      },
+    ],
+    visitationTimes: [
+      "🌸 Dry Season (Nov–March): Ideal for hiking and waterfalls.",
+      "🎉 December Holidays: Local carnivals and dances.",
+      "🌧 Rainy Season (May–Oct): Waterfalls in full force.",
+    ],
+  },
+
+  {
+    id: 8,
+    title: "5-Day Nigerian Discovery: Warri & Delta State",
+    subtitle: "5-Day Nigeria Adventure",
+    features: "Creek Life, Local Cuisine, and Niger-Delta Culture",
+    price: 530.0,
+    location: "Warri, Sapele, Ughelli",
+    imgUrl: [
+      "/assets/images/sample4.jpg",
+      "/assets/images/sample7.jpg",
+      "/assets/images/sample1.jpg",
+    ],
+    tags: ["Cultural", "Waterfront", "Budget", "Foodie"],
+    description:
+      "Savor the tastes and stories of the Niger Delta. Enjoy fresh seafood, river tours, and Itsekiri traditions in this offbeat adventure. 🐟🌊",
+    noOfDays: 5,
+    plan: [
+      {
+        day1: {
+          event: "Arrival in Warri",
+          activities: [
+            "Hotel check-in",
+            "Dinner by the riverside",
+            "Evening walk through Warri Main Market",
+          ],
+        },
+        day2: {
+          event: "Creek Tour",
+          activities: [
+            "Boat tour through local creeks",
+            "Visit floating market",
+            "Seafood barbecue night",
+          ],
+        },
+        day3: {
+          event: "Delta Culture",
+          activities: [
+            "Itsekiri Palace visit",
+            "Dance/drum workshop",
+            "Visit to Delta State University museum",
+          ],
+        },
+        day4: {
+          event: "Local Foodie Day",
+          activities: [
+            "Cooking class: banga soup & starch",
+            "Relaxation at Oghara Park",
+            "Storytelling night",
+          ],
+        },
+        day5: {
+          event: "Departure",
+          activities: ["Farewell brunch", "Transfer to airport"],
+        },
+      },
+    ],
+    visitationTimes: [
+      "🌧 Rainy Season (April–October): River tours thrive.",
+      "🌸 Dry Season (Nov–March): Ideal for travel comfort.",
+      "🎉 December Holidays: Local parties and seafood feasts.",
+    ],
+  },
+
+  {
+    id: 9,
+    title: "5-Day Nigerian Discovery: Ilorin & Kwara",
+    subtitle: "5-Day Nigeria Adventure",
+    features: "Islamic History, Natural Beauty, and Quiet Cities",
+    price: 450.0,
+    location: "Ilorin, Esie, Offa",
+    imgUrl: [
+      "/assets/images/sample2.jpg",
+      "/assets/images/sample6.jpg",
+      "/assets/images/sample3.jpg",
+    ],
+    tags: ["Cultural", "Historical", "Nature", "Quiet"],
+    description:
+      "Kwara State offers peaceful escapes and rich cultural heritage. Visit ancient museums, explore savannah hills, and unwind in quiet towns. 🕌🏞️",
+    noOfDays: 5,
+    plan: [
+      {
+        day1: {
+          event: "Arrival in Ilorin",
+          activities: [
+            "Hotel check-in",
+            "Explore Emir's Palace",
+            "Dinner and rest",
+          ],
+        },
+        day2: {
+          event: "Museum & Culture Day",
+          activities: [
+            "Visit Esie Museum (stone figures)",
+            "Attend local pottery demo",
+            "Evening tea with locals",
+          ],
+        },
+        day3: {
+          event: "Nature Experience",
+          activities: [
+            "Visit Owu Waterfall",
+            "Picnic in the forest",
+            "Evening walk through Offa town",
+          ],
+        },
+        day4: {
+          event: "City Exploration",
+          activities: [
+            "Ilorin Central Mosque tour",
+            "Shopping at Mandate Market",
+            "Taste Amala and Gbegiri",
+          ],
+        },
+        day5: {
+          event: "Departure",
+          activities: ["Check out and transfer to airport"],
+        },
+      },
+    ],
+    visitationTimes: [
+      "🌸 Dry Season (Nov–March): Comfortable and scenic.",
+      "🌧 Rainy Season (April–Oct): Waterfalls flow strongest.",
+      "🎉 December Holidays: Peaceful, with cultural events.",
+    ],
+  },
+
+  {
+    id: 10,
+    title: "5-Day Nigerian Discovery: Makurdi & Benue",
+    subtitle: "5-Day Nigeria Adventure",
+    features: "River Life, Farm Tours, and Local Vibes",
+    price: 475.0,
+    location: "Makurdi, Gboko, Otukpo",
+    imgUrl: [
+      "/assets/images/sample5.jpg",
+      "/assets/images/sample8.jpg",
+      "/assets/images/sample2.jpg",
+    ],
+    tags: ["Nature", "Cultural", "Adventure", "Budget"],
+    description:
+      "Benue — the food basket of Nigeria — offers stunning riverside views, cultural warmth, and rich agricultural tours. 🚣‍♀️🌾",
+    noOfDays: 5,
+    plan: [
+      {
+        day1: {
+          event: "Arrival in Makurdi",
+          activities: [
+            "Check in by River Benue",
+            "Evening canoe cruise",
+            "Dinner with Tiv dance show",
+          ],
+        },
+        day2: {
+          event: "Agricultural Tour",
+          activities: [
+            "Farm visit and tasting tour",
+            "Cooking class: pounded yam & egusi",
+            "Evening music session",
+          ],
+        },
+        day3: {
+          event: "Cultural Day",
+          activities: [
+            "Explore Gboko market",
+            "Visit Tor Tiv’s Palace",
+            "Try traditional Tiv attire",
+          ],
+        },
+        day4: {
+          event: "Adventure Day",
+          activities: [
+            "Visit to Ushongo Hills",
+            "Forest hike and picnic",
+            "Rest at resort",
+          ],
+        },
+        day5: {
+          event: "Departure",
+          activities: ["Riverfront breakfast", "Transfer to airport"],
+        },
+      },
+    ],
+    visitationTimes: [
+      "🌸 Dry Season (Nov–March): Best time to enjoy river and farms.",
+      "🌧 Rainy Season (April–Oct): Green landscapes and cool nights.",
+      "🎉 December Holidays: Festive and welcoming.",
+    ],
   },
 ];
