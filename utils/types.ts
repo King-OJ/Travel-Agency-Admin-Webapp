@@ -39,27 +39,11 @@ export type Tour = {
   tags: string[];
   description: string;
   noOfDays: number;
-  plan: {
-    day1: {
+  plans: {
+    [key: string]: {
       event: string;
       activities: string[];
     };
-    day2: {
-      event: string;
-      activities: string[];
-    };
-    day3: {
-      event: string;
-      activities: string[];
-    };
-    day4: {
-      event: string;
-      activities: string[];
-    };
-    day5: {
-      event: string;
-      activities: string[];
-    };
-  }[];
+  };
   visitationTimes: string[];
 };

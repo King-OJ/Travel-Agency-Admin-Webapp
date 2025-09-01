@@ -4,13 +4,13 @@ import React, { useState } from "react";
 import PlusIcon from "@/icons/plus.svg";
 import TripsTable from "@/components/TripsTable";
 import PaginationBtns from "@/components/PaginationBtns";
-import { allTrips } from "@/utils/mockdata";
+import { tours } from "@/utils/mockdata";
 
 function AllTrips() {
   const [currentPage, setCurrentPage] = useState(1);
 
   const itemsPerPage = 6;
-  const totalPages = Math.ceil(allTrips.length / itemsPerPage);
+  const totalPages = Math.ceil(tours.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
 
   return (
@@ -26,7 +26,7 @@ function AllTrips() {
       </div>
       <div className="divide-y-[1px] divide-[#d8d7db]">
         <TripsTable
-          trips={allTrips}
+          tours={tours}
           startIndex={startIndex}
           endIndex={startIndex + itemsPerPage}
         />

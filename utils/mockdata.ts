@@ -447,49 +447,47 @@ export const tours: Tour[] = [
     description:
       "Experience the pulse of Nigeria in 5 unforgettable days across Lagos, Badagry, and Lekki. Discover rich history in Badagry, relax on Lekki beaches, and dive into vibrant city life. 🏖️🎶",
     noOfDays: 5,
-    plan: [
-      {
-        day1: {
-          event: "Arrival & Lekki Exploration",
-          activities: [
-            "Arrive at Murtala Muhammed Airport & check-in",
-            "Visit Lekki Conservation Centre",
-            "Dinner at local seafood spot",
-          ],
-        },
-        day2: {
-          event: "Badagry Heritage Tour",
-          activities: [
-            "Tour Badagry Slave Museum",
-            "Walk the Point of No Return trail",
-            "Cultural performance in the evening",
-          ],
-        },
-        day3: {
-          event: "City & Market Day",
-          activities: [
-            "Explore Balogun Market",
-            "Visit National Museum Lagos",
-            "Dinner with live music at Terra Kulture",
-          ],
-        },
-        day4: {
-          event: "Beach Day & Arts",
-          activities: [
-            "Relax at Elegushi Beach",
-            "Tour Nike Art Gallery",
-            "Street food tasting night",
-          ],
-        },
-        day5: {
-          event: "Departure",
-          activities: [
-            "Souvenir shopping in Lekki Arts Market",
-            "Depart for airport",
-          ],
-        },
+    plans: {
+      day1: {
+        event: "Arrival & Lekki Exploration",
+        activities: [
+          "Arrive at Murtala Muhammed Airport & check-in",
+          "Visit Lekki Conservation Centre",
+          "Dinner at local seafood spot",
+        ],
       },
-    ],
+      day2: {
+        event: "Badagry Heritage Tour",
+        activities: [
+          "Tour Badagry Slave Museum",
+          "Walk the Point of No Return trail",
+          "Cultural performance in the evening",
+        ],
+      },
+      day3: {
+        event: "City & Market Day",
+        activities: [
+          "Explore Balogun Market",
+          "Visit National Museum Lagos",
+          "Dinner with live music at Terra Kulture",
+        ],
+      },
+      day4: {
+        event: "Beach Day & Arts",
+        activities: [
+          "Relax at Elegushi Beach",
+          "Tour Nike Art Gallery",
+          "Street food tasting night",
+        ],
+      },
+      day5: {
+        event: "Departure",
+        activities: [
+          "Souvenir shopping in Lekki Arts Market",
+          "Depart for airport",
+        ],
+      },
+    },
     visitationTimes: [
       "🌸 Dry Season (Nov–March): Best weather for sightseeing and cultural festivals.",
       "🔥 Harmattan (Dec–Feb): Cool, dusty winds with clear skies.",
@@ -513,46 +511,45 @@ export const tours: Tour[] = [
     description:
       "Discover Nigeria’s capital with a blend of modern vibes, serene lakes, and iconic landmarks. Climb Aso Rock, cruise on Jabi Lake, and dine under the stars. 🌄🛶",
     noOfDays: 5,
-    plan: [
-      {
-        day1: {
-          event: "Arrival in Abuja",
-          activities: [
-            "Check-in and relax at hotel",
-            "Evening stroll at Jabi Lake Mall",
-            "Dinner with live music",
-          ],
-        },
-        day2: {
-          event: "Nature & Hike Day",
-          activities: [
-            "Climb Aso Rock",
-            "Visit Millennium Park",
-            "Evening picnic at Jabi Lake",
-          ],
-        },
-        day3: {
-          event: "Cultural Immersion",
-          activities: [
-            "Visit Arts & Crafts Village",
-            "National Mosque & Ecumenical Centre tour",
-            "Taste northern cuisine at local restaurant",
-          ],
-        },
-        day4: {
-          event: "Adventure & Leisure",
-          activities: [
-            "Zuma Rock photo stop",
-            "Go karting or water sports at Jabi Park",
-            "Spa relaxation",
-          ],
-        },
-        day5: {
-          event: "Departure",
-          activities: ["Quick city shopping", "Airport transfer & goodbye"],
-        },
+    plans: {
+      day1: {
+        event: "Arrival in Abuja",
+        activities: [
+          "Check-in and relax at hotel",
+          "Evening stroll at Jabi Lake Mall",
+          "Dinner with live music",
+        ],
       },
-    ],
+      day2: {
+        event: "Nature & Hike Day",
+        activities: [
+          "Climb Aso Rock",
+          "Visit Millennium Park",
+          "Evening picnic at Jabi Lake",
+        ],
+      },
+      day3: {
+        event: "Cultural Immersion",
+        activities: [
+          "Visit Arts & Crafts Village",
+          "National Mosque & Ecumenical Centre tour",
+          "Taste northern cuisine at local restaurant",
+        ],
+      },
+      day4: {
+        event: "Adventure & Leisure",
+        activities: [
+          "Zuma Rock photo stop",
+          "Go karting or water sports at Jabi Park",
+          "Spa relaxation",
+        ],
+      },
+      day5: {
+        event: "Departure",
+        activities: ["Quick city shopping", "Airport transfer & goodbye"],
+      },
+    },
+
     visitationTimes: [
       "🌸 Dry Season (Nov–March): Ideal for outdoor adventures.",
       "🔥 Harmattan (Dec–Feb): Clear skies and cool air.",
@@ -576,46 +573,45 @@ export const tours: Tour[] = [
     description:
       "Journey into Nigeria’s lush southeast. Ride cable cars in Obudu, relax at Tinapa Resort, and dance through Calabar’s carnival culture. 🌿⛰️",
     noOfDays: 5,
-    plan: [
-      {
-        day1: {
-          event: "Arrival in Calabar",
-          activities: [
-            "Hotel check-in and rest",
-            "Evening walk by Calabar River",
-            "Dinner at Marina Resort",
-          ],
-        },
-        day2: {
-          event: "Obudu Mountain Adventure",
-          activities: [
-            "Drive to Obudu Cattle Ranch",
-            "Ride the cable car to mountain top",
-            "Bonfire & night under the stars",
-          ],
-        },
-        day3: {
-          event: "Nature & Wellness",
-          activities: [
-            "Visit waterfall and canopy walkway",
-            "Local spa session",
-            "Taste local Efik dishes",
-          ],
-        },
-        day4: {
-          event: "Cultural Day in Calabar",
-          activities: [
-            "Slave History Museum tour",
-            "Tinapa Free Zone shopping",
-            "Street performance or carnival rehearsal",
-          ],
-        },
-        day5: {
-          event: "Departure",
-          activities: ["Visit Calabar market", "Transfer to airport"],
-        },
+    plans: {
+      day1: {
+        event: "Arrival in Calabar",
+        activities: [
+          "Hotel check-in and rest",
+          "Evening walk by Calabar River",
+          "Dinner at Marina Resort",
+        ],
       },
-    ],
+      day2: {
+        event: "Obudu Mountain Adventure",
+        activities: [
+          "Drive to Obudu Cattle Ranch",
+          "Ride the cable car to mountain top",
+          "Bonfire & night under the stars",
+        ],
+      },
+      day3: {
+        event: "Nature & Wellness",
+        activities: [
+          "Visit waterfall and canopy walkway",
+          "Local spa session",
+          "Taste local Efik dishes",
+        ],
+      },
+      day4: {
+        event: "Cultural Day in Calabar",
+        activities: [
+          "Slave History Museum tour",
+          "Tinapa Free Zone shopping",
+          "Street performance or carnival rehearsal",
+        ],
+      },
+      day5: {
+        event: "Departure",
+        activities: ["Visit Calabar market", "Transfer to airport"],
+      },
+    },
+
     visitationTimes: [
       "🎉 December Holidays: Calabar Carnival & festive events.",
       "🌧 Rainy Season (April–October): Best for lush scenery.",
@@ -640,46 +636,45 @@ export const tours: Tour[] = [
     description:
       "Explore Nigeria’s ancient northern cities with their rich empires, mosques, and traditional arts. From the ancient city walls to centuries-old palaces, history breathes here. 🕌📜",
     noOfDays: 5,
-    plan: [
-      {
-        day1: {
-          event: "Arrival in Kano",
-          activities: [
-            "Check into traditional guesthouse",
-            "Tour Kano City Walls",
-            "Dinner with Hausa music",
-          ],
-        },
-        day2: {
-          event: "Cultural Day",
-          activities: [
-            "Gidan Makama Museum visit",
-            "Dye pits and leather market tour",
-            "Tea and suya in Kurmi Market",
-          ],
-        },
-        day3: {
-          event: "Katsina Exploration",
-          activities: [
-            "Travel to Katsina",
-            "Visit Emir’s Palace and Gobarau Minaret",
-            "Try local delicacies",
-          ],
-        },
-        day4: {
-          event: "Zaria City Tour",
-          activities: [
-            "Explore Ahmadu Bello University campus",
-            "Visit Queen Amina’s Wall",
-            "Relaxing night at local hotel",
-          ],
-        },
-        day5: {
-          event: "Departure",
-          activities: ["Visit Zaria craft shops", "Head to airport"],
-        },
+    plans: {
+      day1: {
+        event: "Arrival in Kano",
+        activities: [
+          "Check into traditional guesthouse",
+          "Tour Kano City Walls",
+          "Dinner with Hausa music",
+        ],
       },
-    ],
+      day2: {
+        event: "Cultural Day",
+        activities: [
+          "Gidan Makama Museum visit",
+          "Dye pits and leather market tour",
+          "Tea and suya in Kurmi Market",
+        ],
+      },
+      day3: {
+        event: "Katsina Exploration",
+        activities: [
+          "Travel to Katsina",
+          "Visit Emir’s Palace and Gobarau Minaret",
+          "Try local delicacies",
+        ],
+      },
+      day4: {
+        event: "Zaria City Tour",
+        activities: [
+          "Explore Ahmadu Bello University campus",
+          "Visit Queen Amina’s Wall",
+          "Relaxing night at local hotel",
+        ],
+      },
+      day5: {
+        event: "Departure",
+        activities: ["Visit Zaria craft shops", "Head to airport"],
+      },
+    },
+
     visitationTimes: [
       "🔥 Harmattan (Dec–Feb): Cool, dry and ideal for touring.",
       "🌸 Dry Season (Nov–March): Great for open-air exploration.",
@@ -703,46 +698,45 @@ export const tours: Tour[] = [
     description:
       "Escape to the serene landscapes of Plateau State. Enjoy cool weather, rock formations, and a calm pace. A refreshing experience away from the heat. 🪨🌤️",
     noOfDays: 5,
-    plan: [
-      {
-        day1: {
-          event: "Arrival in Jos",
-          activities: [
-            "Arrive via Jos Airport",
-            "City tour & Jos Wildlife Park",
-            "Dinner at Jos Club",
-          ],
-        },
-        day2: {
-          event: "Nature Day",
-          activities: [
-            "Hike around Riyom Rock",
-            "Visit Assop Falls",
-            "Picnic in the countryside",
-          ],
-        },
-        day3: {
-          event: "Cultural Day",
-          activities: [
-            "National Museum & Nok artifacts",
-            "Local village visit",
-            "Traditional dance performance",
-          ],
-        },
-        day4: {
-          event: "Adventure & Relaxation",
-          activities: [
-            "Horseback riding or biking trail",
-            "Craft shopping in Jos market",
-            "Bonfire & storytelling night",
-          ],
-        },
-        day5: {
-          event: "Departure",
-          activities: ["Breakfast & airport transfer"],
-        },
+    plans: {
+      day1: {
+        event: "Arrival in Jos",
+        activities: [
+          "Arrive via Jos Airport",
+          "City tour & Jos Wildlife Park",
+          "Dinner at Jos Club",
+        ],
       },
-    ],
+      day2: {
+        event: "Nature Day",
+        activities: [
+          "Hike around Riyom Rock",
+          "Visit Assop Falls",
+          "Picnic in the countryside",
+        ],
+      },
+      day3: {
+        event: "Cultural Day",
+        activities: [
+          "National Museum & Nok artifacts",
+          "Local village visit",
+          "Traditional dance performance",
+        ],
+      },
+      day4: {
+        event: "Adventure & Relaxation",
+        activities: [
+          "Horseback riding or biking trail",
+          "Craft shopping in Jos market",
+          "Bonfire & storytelling night",
+        ],
+      },
+      day5: {
+        event: "Departure",
+        activities: ["Breakfast & airport transfer"],
+      },
+    },
+
     visitationTimes: [
       "🌸 Dry Season (Nov–March): Cool and ideal for hiking.",
       "🎉 December Holidays: Calm, yet festive vibes.",
@@ -766,46 +760,45 @@ export const tours: Tour[] = [
     description:
       "Experience Yoruba heartland with a blend of academia, ancient sites, and bustling markets. Climb Bower’s Tower and explore the old Oyo Empire. 🏛️📚",
     noOfDays: 5,
-    plan: [
-      {
-        day1: {
-          event: "Arrival in Ibadan",
-          activities: [
-            "Check in near University of Ibadan",
-            "Visit Agodi Gardens",
-            "Evening food tour",
-          ],
-        },
-        day2: {
-          event: "Historical Ibadan",
-          activities: [
-            "Explore Mapo Hall",
-            "Climb Bower’s Tower",
-            "Shop at Dugbe Market",
-          ],
-        },
-        day3: {
-          event: "Oyo City Visit",
-          activities: [
-            "Day trip to Old Oyo National Park",
-            "Visit Alaafin's Palace",
-            "Picnic in Iseyin hills",
-          ],
-        },
-        day4: {
-          event: "Cultural Exploration",
-          activities: [
-            "Yoruba cultural center tour",
-            "Textile dyeing demonstration",
-            "Evening at cultural dance show",
-          ],
-        },
-        day5: {
-          event: "Departure",
-          activities: ["Visit Bodija Market", "Return trip"],
-        },
+    plans: {
+      day1: {
+        event: "Arrival in Ibadan",
+        activities: [
+          "Check in near University of Ibadan",
+          "Visit Agodi Gardens",
+          "Evening food tour",
+        ],
       },
-    ],
+      day2: {
+        event: "Historical Ibadan",
+        activities: [
+          "Explore Mapo Hall",
+          "Climb Bower’s Tower",
+          "Shop at Dugbe Market",
+        ],
+      },
+      day3: {
+        event: "Oyo City Visit",
+        activities: [
+          "Day trip to Old Oyo National Park",
+          "Visit Alaafin's Palace",
+          "Picnic in Iseyin hills",
+        ],
+      },
+      day4: {
+        event: "Cultural Exploration",
+        activities: [
+          "Yoruba cultural center tour",
+          "Textile dyeing demonstration",
+          "Evening at cultural dance show",
+        ],
+      },
+      day5: {
+        event: "Departure",
+        activities: ["Visit Bodija Market", "Return trip"],
+      },
+    },
+
     visitationTimes: [
       "🌸 Dry Season (Nov–March): Best time for outdoor activities.",
       "🎉 December Holidays: Festivals and family gatherings.",
@@ -829,45 +822,44 @@ export const tours: Tour[] = [
     description:
       "Venture into southeastern Nigeria to explore coal mines, waterfalls, and the warm hospitality of the Igbo people. 🧗‍♂️⛲",
     noOfDays: 5,
-    plan: [
-      {
-        day1: {
-          event: "Arrival in Enugu",
-          activities: [
-            "Hotel check-in and evening walk",
-            "Dinner with live highlife music",
-          ],
-        },
-        day2: {
-          event: "Hiking Day",
-          activities: [
-            "Climb Ngwo Pine Forest trail",
-            "Explore caves and waterfalls",
-            "Lunch at mountain top",
-          ],
-        },
-        day3: {
-          event: "Nsukka Visit",
-          activities: [
-            "UNN Art Museum tour",
-            "Explore town markets",
-            "Return to Enugu",
-          ],
-        },
-        day4: {
-          event: "Spiritual Retreat & Nature",
-          activities: [
-            "Awhum Waterfall and Monastery visit",
-            "Quiet afternoon meditation",
-            "Evening Igbo dance class",
-          ],
-        },
-        day5: {
-          event: "Departure",
-          activities: ["Breakfast and checkout"],
-        },
+    plans: {
+      day1: {
+        event: "Arrival in Enugu",
+        activities: [
+          "Hotel check-in and evening walk",
+          "Dinner with live highlife music",
+        ],
       },
-    ],
+      day2: {
+        event: "Hiking Day",
+        activities: [
+          "Climb Ngwo Pine Forest trail",
+          "Explore caves and waterfalls",
+          "Lunch at mountain top",
+        ],
+      },
+      day3: {
+        event: "Nsukka Visit",
+        activities: [
+          "UNN Art Museum tour",
+          "Explore town markets",
+          "Return to Enugu",
+        ],
+      },
+      day4: {
+        event: "Spiritual Retreat & Nature",
+        activities: [
+          "Awhum Waterfall and Monastery visit",
+          "Quiet afternoon meditation",
+          "Evening Igbo dance class",
+        ],
+      },
+      day5: {
+        event: "Departure",
+        activities: ["Breakfast and checkout"],
+      },
+    },
+
     visitationTimes: [
       "🌸 Dry Season (Nov–March): Ideal for hiking and waterfalls.",
       "🎉 December Holidays: Local carnivals and dances.",
@@ -891,46 +883,45 @@ export const tours: Tour[] = [
     description:
       "Savor the tastes and stories of the Niger Delta. Enjoy fresh seafood, river tours, and Itsekiri traditions in this offbeat adventure. 🐟🌊",
     noOfDays: 5,
-    plan: [
-      {
-        day1: {
-          event: "Arrival in Warri",
-          activities: [
-            "Hotel check-in",
-            "Dinner by the riverside",
-            "Evening walk through Warri Main Market",
-          ],
-        },
-        day2: {
-          event: "Creek Tour",
-          activities: [
-            "Boat tour through local creeks",
-            "Visit floating market",
-            "Seafood barbecue night",
-          ],
-        },
-        day3: {
-          event: "Delta Culture",
-          activities: [
-            "Itsekiri Palace visit",
-            "Dance/drum workshop",
-            "Visit to Delta State University museum",
-          ],
-        },
-        day4: {
-          event: "Local Foodie Day",
-          activities: [
-            "Cooking class: banga soup & starch",
-            "Relaxation at Oghara Park",
-            "Storytelling night",
-          ],
-        },
-        day5: {
-          event: "Departure",
-          activities: ["Farewell brunch", "Transfer to airport"],
-        },
+    plans: {
+      day1: {
+        event: "Arrival in Warri",
+        activities: [
+          "Hotel check-in",
+          "Dinner by the riverside",
+          "Evening walk through Warri Main Market",
+        ],
       },
-    ],
+      day2: {
+        event: "Creek Tour",
+        activities: [
+          "Boat tour through local creeks",
+          "Visit floating market",
+          "Seafood barbecue night",
+        ],
+      },
+      day3: {
+        event: "Delta Culture",
+        activities: [
+          "Itsekiri Palace visit",
+          "Dance/drum workshop",
+          "Visit to Delta State University museum",
+        ],
+      },
+      day4: {
+        event: "Local Foodie Day",
+        activities: [
+          "Cooking class: banga soup & starch",
+          "Relaxation at Oghara Park",
+          "Storytelling night",
+        ],
+      },
+      day5: {
+        event: "Departure",
+        activities: ["Farewell brunch", "Transfer to airport"],
+      },
+    },
+
     visitationTimes: [
       "🌧 Rainy Season (April–October): River tours thrive.",
       "🌸 Dry Season (Nov–March): Ideal for travel comfort.",
@@ -954,46 +945,45 @@ export const tours: Tour[] = [
     description:
       "Kwara State offers peaceful escapes and rich cultural heritage. Visit ancient museums, explore savannah hills, and unwind in quiet towns. 🕌🏞️",
     noOfDays: 5,
-    plan: [
-      {
-        day1: {
-          event: "Arrival in Ilorin",
-          activities: [
-            "Hotel check-in",
-            "Explore Emir's Palace",
-            "Dinner and rest",
-          ],
-        },
-        day2: {
-          event: "Museum & Culture Day",
-          activities: [
-            "Visit Esie Museum (stone figures)",
-            "Attend local pottery demo",
-            "Evening tea with locals",
-          ],
-        },
-        day3: {
-          event: "Nature Experience",
-          activities: [
-            "Visit Owu Waterfall",
-            "Picnic in the forest",
-            "Evening walk through Offa town",
-          ],
-        },
-        day4: {
-          event: "City Exploration",
-          activities: [
-            "Ilorin Central Mosque tour",
-            "Shopping at Mandate Market",
-            "Taste Amala and Gbegiri",
-          ],
-        },
-        day5: {
-          event: "Departure",
-          activities: ["Check out and transfer to airport"],
-        },
+    plans: {
+      day1: {
+        event: "Arrival in Ilorin",
+        activities: [
+          "Hotel check-in",
+          "Explore Emir's Palace",
+          "Dinner and rest",
+        ],
       },
-    ],
+      day2: {
+        event: "Museum & Culture Day",
+        activities: [
+          "Visit Esie Museum (stone figures)",
+          "Attend local pottery demo",
+          "Evening tea with locals",
+        ],
+      },
+      day3: {
+        event: "Nature Experience",
+        activities: [
+          "Visit Owu Waterfall",
+          "Picnic in the forest",
+          "Evening walk through Offa town",
+        ],
+      },
+      day4: {
+        event: "City Exploration",
+        activities: [
+          "Ilorin Central Mosque tour",
+          "Shopping at Mandate Market",
+          "Taste Amala and Gbegiri",
+        ],
+      },
+      day5: {
+        event: "Departure",
+        activities: ["Check out and transfer to airport"],
+      },
+    },
+
     visitationTimes: [
       "🌸 Dry Season (Nov–March): Comfortable and scenic.",
       "🌧 Rainy Season (April–Oct): Waterfalls flow strongest.",
@@ -1017,46 +1007,45 @@ export const tours: Tour[] = [
     description:
       "Benue — the food basket of Nigeria — offers stunning riverside views, cultural warmth, and rich agricultural tours. 🚣‍♀️🌾",
     noOfDays: 5,
-    plan: [
-      {
-        day1: {
-          event: "Arrival in Makurdi",
-          activities: [
-            "Check in by River Benue",
-            "Evening canoe cruise",
-            "Dinner with Tiv dance show",
-          ],
-        },
-        day2: {
-          event: "Agricultural Tour",
-          activities: [
-            "Farm visit and tasting tour",
-            "Cooking class: pounded yam & egusi",
-            "Evening music session",
-          ],
-        },
-        day3: {
-          event: "Cultural Day",
-          activities: [
-            "Explore Gboko market",
-            "Visit Tor Tiv’s Palace",
-            "Try traditional Tiv attire",
-          ],
-        },
-        day4: {
-          event: "Adventure Day",
-          activities: [
-            "Visit to Ushongo Hills",
-            "Forest hike and picnic",
-            "Rest at resort",
-          ],
-        },
-        day5: {
-          event: "Departure",
-          activities: ["Riverfront breakfast", "Transfer to airport"],
-        },
+    plans: {
+      day1: {
+        event: "Arrival in Makurdi",
+        activities: [
+          "Check in by River Benue",
+          "Evening canoe cruise",
+          "Dinner with Tiv dance show",
+        ],
       },
-    ],
+      day2: {
+        event: "Agricultural Tour",
+        activities: [
+          "Farm visit and tasting tour",
+          "Cooking class: pounded yam & egusi",
+          "Evening music session",
+        ],
+      },
+      day3: {
+        event: "Cultural Day",
+        activities: [
+          "Explore Gboko market",
+          "Visit Tor Tiv’s Palace",
+          "Try traditional Tiv attire",
+        ],
+      },
+      day4: {
+        event: "Adventure Day",
+        activities: [
+          "Visit to Ushongo Hills",
+          "Forest hike and picnic",
+          "Rest at resort",
+        ],
+      },
+      day5: {
+        event: "Departure",
+        activities: ["Riverfront breakfast", "Transfer to airport"],
+      },
+    },
+
     visitationTimes: [
       "🌸 Dry Season (Nov–March): Best time to enjoy river and farms.",
       "🌧 Rainy Season (April–Oct): Green landscapes and cool nights.",

@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import React from "react";
 import StatCard from "@/components/StatCard";
-import { stats, trips } from "@/utils/mockdata";
+import { stats, tours, trips } from "@/utils/mockdata";
 import TripsCard from "@/components/TripCard";
 import UserGrowthChart from "@/components/UserGrowthChart";
 import TripTrendsChart from "@/components/TripTrendsChart";
@@ -36,10 +36,10 @@ function Dashboard() {
       <section className="space-y-6">
         <h3 className="font-semibold">Trips</h3>
         <ul className="gap-4 lg:gap-6 grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {trips.map((trip) => {
+          {tours.slice(0, 4).map((tour) => {
             return (
-              <li key={trip.id}>
-                <TripsCard trip={trip} />
+              <li key={tour.id}>
+                <TripsCard tour={tour} />
               </li>
             );
           })}

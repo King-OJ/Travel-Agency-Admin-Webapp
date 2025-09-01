@@ -1,11 +1,25 @@
-import { Calendar, MapPin, Star, Stars } from "lucide-react";
+import { Calendar, MapPin, Star } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 import { Badge } from "./ui/badge";
 import { Tour } from "@/utils/types";
+import { tagStyles } from "@/utils/constants";
+import { formatDayKey } from "@/utils/functions";
 
 function TourDetails({ tour }: { tour: Tour }) {
-  const { imgUrl, title, subtitle, noOfDays, tags, location } = tour;
+  const {
+    imgUrl,
+    title,
+    subtitle,
+    noOfDays,
+    description,
+    tags,
+    features,
+    location,
+    price,
+    plans,
+  } = tour;
+
   return (
     <section>
       <h3 className="font-bold text-2xl">{title}</h3>
@@ -33,15 +47,21 @@ function TourDetails({ tour }: { tour: Tour }) {
         </div>
         <div className="flex justify-evenly items-center">
           <ul className="flex gap-4">
-            {tags.map((tag, i) => (
-              <li key={i}>
-                <Badge
-                  className={`text-gray-700 text-sm bg-gray-100 rounded-full capitalize font-semibold`}
-                >
-                  {tag}
-                </Badge>
-              </li>
-            ))}
+            {tags.map((tag, i) => {
+              const style = tagStyles[tag] || {
+                textColor: "text-gray-700",
+                bgColor: "bg-gray-100",
+              };
+              return (
+                <li key={i}>
+                  <Badge
+                    className={`${style.textColor} ${style.bgColor} rounded-full capitalize font-semibold`}
+                  >
+                    {tag}
+                  </Badge>
+                </li>
+              );
+            })}
           </ul>
 
           <ul className="flex items-center">
@@ -56,6 +76,36 @@ function TourDetails({ tour }: { tour: Tour }) {
             4.9 / 5.0
           </Badge>
         </div>
+      </div>
+      <div className="mt-8">
+        <div className="space-y-[4px]">
+          <div className="flex items-center justify-between">
+            <h4 className="font-bold text-xl">{subtitle}</h4>
+            <Badge className="bg-white text-black text-base font-bold rounded-full">
+              ${price}
+            </Badge>
+          </div>
+          <p className="ash-text font-medium text-base">{features}</p>
+        </div>
+
+        <p className="my-6">{description}</p>
+
+        <ul className="space-y-6">
+          {Object.entries(plans).map(([day, plan]) => {
+            return (
+              <li key={day}>
+                <h5 className="font-semibold text-lg mb-2">
+                  {formatDayKey(day)} : {plan.event}
+                </h5>
+                <ul className="list-disc list-inside pl-4 space-y-4">
+                  {plan.activities.map((activity, i) => (
+                    <li key={i}>{activity}</li>
+                  ))}
+                </ul>
+              </li>
+            );
+          })}
+        </ul>
       </div>
     </section>
   );
