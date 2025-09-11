@@ -5,6 +5,7 @@ import { Badge } from "./ui/badge";
 import { Tour } from "@/utils/types";
 import { tagStyles } from "@/utils/constants";
 import { formatDayKey } from "@/utils/functions";
+import { Button } from "./ui/button";
 
 function TourDetails({ tour }: { tour: Tour }) {
   const {
@@ -15,7 +16,7 @@ function TourDetails({ tour }: { tour: Tour }) {
     description,
     tags,
     features,
-    location,
+    destination,
     price,
     plans,
   } = tour;
@@ -30,7 +31,7 @@ function TourDetails({ tour }: { tour: Tour }) {
         </div>
         <div className="flex items-center space-x-2 ash-text">
           <MapPin size={16} />
-          <p className="font-medium">{location}</p>
+          <p className="font-medium">{destination}</p>
         </div>
       </div>
       <div className="space-y-4">
@@ -77,7 +78,7 @@ function TourDetails({ tour }: { tour: Tour }) {
           </Badge>
         </div>
       </div>
-      <div className="mt-8">
+      <div className="mt-12">
         <div className="space-y-[4px]">
           <div className="flex items-center justify-between">
             <h4 className="font-bold text-xl">{subtitle}</h4>
@@ -88,9 +89,9 @@ function TourDetails({ tour }: { tour: Tour }) {
           <p className="ash-text font-medium text-base">{features}</p>
         </div>
 
-        <p className="my-6">{description}</p>
+        <p className="my-8">{description}</p>
 
-        <ul className="space-y-6">
+        <ul className="space-y-8">
           {Object.entries(plans).map(([day, plan]) => {
             return (
               <li key={day}>
@@ -106,6 +107,14 @@ function TourDetails({ tour }: { tour: Tour }) {
             );
           })}
         </ul>
+        <div className="w-full my-10">
+          <Button className="w-full text-base flex items-center font-semibold">
+            <span>Pay and join trip</span>{" "}
+            <Badge className="bg-white rounded-full text-black font-bold">
+              ${price}
+            </Badge>
+          </Button>
+        </div>
       </div>
     </section>
   );

@@ -9,7 +9,7 @@ export type Stat = {
 export type Trip = {
   id: number;
   title: string;
-  location: string;
+  destination: string;
   imgUrl: string;
   tags: string[];
   price: number;
@@ -34,7 +34,7 @@ export type Tour = {
   subtitle: string;
   features: string;
   price: number;
-  location: string;
+  destination: string;
   imgUrl: string[];
   tags: string[];
   description: string;

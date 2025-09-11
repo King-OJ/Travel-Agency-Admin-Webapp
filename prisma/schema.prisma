@@ -1,0 +1,84 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String  @map("user_id")
+  type              String
+  provider          String
+  providerAccountId String  @map("provider_account_id")
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+  @@map("accounts")
+}
+
+model Tour {
+  id              String   @id @default(cuid())
+  title           String
+  subtitle        String
+  features        String // Consider making this a JSON field if it's structured data
+  price           Float
+  destination     String
+  visitationTimes String[] // Using native array type for PostgreSQL
+  noOfDays        Int
+  description     String
+  tags            String[] // Using native array type for PostgreSQL
+  imgUrl          String[] // Using native array type for PostgreSQL
+
+  // For the plans object with dynamic keys, we'll use JSON type
+  plans     Json
+  createdBy User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId    String
+  // Timestamps for tracking
+  createdAt DateTime    @default(now())
+  updatedAt DateTime    @updatedAt
+  Itinerary Itinerary[]
+
+  @@map("tours")
+}
+
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String    @unique
+  emailVerified DateTime?
+  image         String?
+  accounts      Account[]
+  tours         Tour[]
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  @@map("users")
+}
+
+model Itinerary {
+  id          String @id @default(cuid())
+  day         Int
+  title       String
+  description String
+  tour        Tour   @relation(fields: [tourId], references: [id], onDelete: Cascade)
+  tourId      String
+
+  @@map("itineraries")
+}

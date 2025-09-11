@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -8,7 +7,7 @@ import {
   CardHeader,
 } from "@/components/ui/card";
 import LogoAndTitle from "@/components/LogoAndTitle";
-import GoogleIcon from "@/icons/google.svg";
+import SignInButton from "@/components/SignInButton";
 
 function Auth() {
   return (
@@ -36,10 +35,7 @@ function Auth() {
             </p>
           </CardContent>
           <CardFooter className="flex-col gap-2">
-            <Button className="w-full blue-color-bg font-semibold text-white flex gap-2 items-center">
-              <GoogleIcon className="!h-6 !w-6" />
-              Sign in with Google
-            </Button>
+            <SignInButton />
           </CardFooter>
         </Card>
       </div>

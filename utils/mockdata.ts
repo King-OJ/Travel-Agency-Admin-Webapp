@@ -23,7 +23,7 @@ export const trips: Trip[] = [
   {
     id: 1,
     title: "Eko Hotels",
-    location: "Highland street, Lagos",
+    destination: "Highland street, Lagos",
     imgUrl: "/assets/images/sample.jpeg",
     tags: ["Mountains", "City"],
     price: 300,
@@ -31,7 +31,7 @@ export const trips: Trip[] = [
   {
     id: 2,
     title: "Millenium Hotels",
-    location: "Lowland, Nigeria",
+    destination: "Lowland, Nigeria",
     imgUrl: "/assets/images/sample1.jpg",
     tags: ["Solo Travel", "Budget"],
     price: 790,
@@ -39,7 +39,7 @@ export const trips: Trip[] = [
   {
     id: 3,
     title: "High towers park",
-    location: "Port Harcourt, Rivers State",
+    destination: "Port Harcourt, Rivers State",
     imgUrl: "/assets/images/sample2.jpg",
     tags: ["Luxury", "Beach"],
     price: 870,
@@ -47,7 +47,7 @@ export const trips: Trip[] = [
   {
     id: 4,
     title: "Grills in Uyo",
-    location: "Akwa Ibom, Nigeria",
+    destination: "Akwa Ibom, Nigeria",
     imgUrl: "/assets/images/sample3.jpg",
     tags: ["Sports", "Adventurous"],
     price: 870,
@@ -108,7 +108,7 @@ export const allTrips: Trip[] = [
   {
     id: 1,
     title: "Eko Hotels",
-    location: "Highland street, Lagos",
+    destination: "Highland street, Lagos",
     imgUrl: "/assets/images/sample3.jpg",
     tags: ["Mountains", "City"],
     price: 300,
@@ -116,7 +116,7 @@ export const allTrips: Trip[] = [
   {
     id: 2,
     title: "Millennium Hotels",
-    location: "Lowland, Nigeria",
+    destination: "Lowland, Nigeria",
     imgUrl: "/assets/images/sample7.jpg",
     tags: ["Solo Travel", "Budget"],
     price: 790,
@@ -124,7 +124,7 @@ export const allTrips: Trip[] = [
   {
     id: 3,
     title: "High Towers Park",
-    location: "Port Harcourt, Rivers State",
+    destination: "Port Harcourt, Rivers State",
     imgUrl: "/assets/images/sample1.jpg",
     tags: ["Luxury", "Beach"],
     price: 870,
@@ -132,7 +132,7 @@ export const allTrips: Trip[] = [
   {
     id: 4,
     title: "Grills in Uyo",
-    location: "Akwa Ibom, Nigeria",
+    destination: "Akwa Ibom, Nigeria",
     imgUrl: "/assets/images/sample2.jpg",
     tags: ["Sports", "Adventurous"],
     price: 870,
@@ -140,7 +140,7 @@ export const allTrips: Trip[] = [
   {
     id: 5,
     title: "Tropical Bay Resort",
-    location: "Badagry, Lagos",
+    destination: "Badagry, Lagos",
     imgUrl: "/assets/images/sample5.jpg",
     tags: ["Beach", "Romantic"],
     price: 1200,
@@ -148,7 +148,7 @@ export const allTrips: Trip[] = [
   {
     id: 6,
     title: "Savannah Suites",
-    location: "Abuja, FCT",
+    destination: "Abuja, FCT",
     imgUrl: "/assets/images/sample6.jpg",
     tags: ["Business", "Luxury"],
     price: 950,
@@ -156,7 +156,7 @@ export const allTrips: Trip[] = [
   {
     id: 7,
     title: "Obudu Mountain Resort",
-    location: "Obudu, Cross River",
+    destination: "Obudu, Cross River",
     imgUrl: "/assets/images/sample8.jpg",
     tags: ["Mountains", "Adventure"],
     price: 1100,
@@ -164,7 +164,7 @@ export const allTrips: Trip[] = [
   {
     id: 8,
     title: "Lush Garden Villas",
-    location: "Enugu, Nigeria",
+    destination: "Enugu, Nigeria",
     imgUrl: "/assets/images/sample4.jpg",
     tags: ["Nature", "Relaxation"],
     price: 600,
@@ -172,7 +172,7 @@ export const allTrips: Trip[] = [
   {
     id: 9,
     title: "The Palms Stay",
-    location: "Victoria Island, Lagos",
+    destination: "Victoria Island, Lagos",
     imgUrl: "/assets/images/sample1.jpg",
     tags: ["City", "Luxury"],
     price: 1350,
@@ -180,7 +180,7 @@ export const allTrips: Trip[] = [
   {
     id: 10,
     title: "Eco Valley Camp",
-    location: "Ijebu Ode, Ogun State",
+    destination: "Ijebu Ode, Ogun State",
     imgUrl: "/assets/images/sample2.jpg",
     tags: ["Camping", "Eco-Friendly"],
     price: 480,
@@ -188,7 +188,7 @@ export const allTrips: Trip[] = [
   {
     id: 11,
     title: "Heritage Lodge",
-    location: "Ibadan, Oyo State",
+    destination: "Ibadan, Oyo State",
     imgUrl: "/assets/images/sample7.jpg",
     tags: ["Cultural", "Budget"],
     price: 370,
@@ -196,7 +196,7 @@ export const allTrips: Trip[] = [
   {
     id: 12,
     title: "Ocean Breeze Hotel",
-    location: "Lekki, Lagos",
+    destination: "Lekki, Lagos",
     imgUrl: "/assets/images/sample6.jpg",
     tags: ["Beach", "Nightlife"],
     price: 950,
@@ -204,7 +204,7 @@ export const allTrips: Trip[] = [
   {
     id: 13,
     title: "Peaceful Pines Resort",
-    location: "Jos, Plateau State",
+    destination: "Jos, Plateau State",
     imgUrl: "/assets/images/sample3.jpg",
     tags: ["Mountains", "Retreat"],
     price: 710,
@@ -212,7 +212,7 @@ export const allTrips: Trip[] = [
   {
     id: 14,
     title: "Luxury Sands Hotel",
-    location: "Asaba, Delta State",
+    destination: "Asaba, Delta State",
     imgUrl: "/assets/images/sample4.jpg",
     tags: ["Luxury", "Family"],
     price: 990,
@@ -220,7 +220,7 @@ export const allTrips: Trip[] = [
   {
     id: 15,
     title: "Serenity Resort",
-    location: "Lokoja, Kogi State",
+    destination: "Lokoja, Kogi State",
     imgUrl: "/assets/images/sample5.jpg",
     tags: ["Nature", "Relaxation"],
     price: 520,
@@ -228,7 +228,7 @@ export const allTrips: Trip[] = [
   {
     id: 16,
     title: "Maple Comfort Inn",
-    location: "Abeokuta, Ogun State",
+    destination: "Abeokuta, Ogun State",
     imgUrl: "/assets/images/sample2.jpg",
     tags: ["Solo Travel", "Budget"],
     price: 430,
@@ -236,7 +236,7 @@ export const allTrips: Trip[] = [
   {
     id: 17,
     title: "Sunset Peak Lodge",
-    location: "Makurdi, Benue State",
+    destination: "Makurdi, Benue State",
     imgUrl: "/assets/images/sample8.jpg",
     tags: ["Hiking", "Viewpoints"],
     price: 890,
@@ -244,7 +244,7 @@ export const allTrips: Trip[] = [
   {
     id: 18,
     title: "Golden Horizon",
-    location: "Calabar, Cross River",
+    destination: "Calabar, Cross River",
     imgUrl: "/assets/images/sample1.jpg",
     tags: ["Culture", "Beach"],
     price: 870,
@@ -252,7 +252,7 @@ export const allTrips: Trip[] = [
   {
     id: 19,
     title: "Coastal Haven Hotel",
-    location: "Warri, Delta State",
+    destination: "Warri, Delta State",
     imgUrl: "/assets/images/sample6.jpg",
     tags: ["Romantic", "Seaside"],
     price: 1140,
@@ -260,7 +260,7 @@ export const allTrips: Trip[] = [
   {
     id: 20,
     title: "Tranquil Trails Resort",
-    location: "Ado-Ekiti, Ekiti State",
+    destination: "Ado-Ekiti, Ekiti State",
     imgUrl: "/assets/images/sample3.jpg",
     tags: ["Nature", "Hiking"],
     price: 760,
@@ -437,7 +437,7 @@ export const tours: Tour[] = [
     subtitle: "5-Day Nigeria Adventure",
     features: "Cultural Heritage, Scenic Nature, and Local Cuisine",
     price: 525.0,
-    location: "Lagos, Badagry, Lekki",
+    destination: "Lagos, Badagry, Lekki",
     imgUrl: [
       "/assets/images/sample1.jpg",
       "/assets/images/sample2.jpg",
@@ -501,7 +501,7 @@ export const tours: Tour[] = [
     subtitle: "5-Day Nigeria Adventure",
     features: "Cultural Heritage, Scenic Nature, and Local Cuisine",
     price: 490.0,
-    location: "Abuja, Aso Rock, Jabi Lake",
+    destination: "Abuja, Aso Rock, Jabi Lake",
     imgUrl: [
       "/assets/images/sample4.jpg",
       "/assets/images/sample5.jpg",
@@ -563,7 +563,7 @@ export const tours: Tour[] = [
     subtitle: "5-Day Nigeria Adventure",
     features: "Rainforest Escapes, Mountain Views, and Festive Culture",
     price: 610.0,
-    location: "Calabar, Obudu, Tinapa",
+    destination: "Calabar, Obudu, Tinapa",
     imgUrl: [
       "/assets/images/sample2.jpg",
       "/assets/images/sample7.jpg",
@@ -626,7 +626,7 @@ export const tours: Tour[] = [
     subtitle: "5-Day Nigeria Adventure",
     features: "Ancient History, Culture, and Northern Architecture",
     price: 470.0,
-    location: "Kano, Katsina, Zaria",
+    destination: "Kano, Katsina, Zaria",
     imgUrl: [
       "/assets/images/sample3.jpg",
       "/assets/images/sample8.jpg",
@@ -688,7 +688,7 @@ export const tours: Tour[] = [
     subtitle: "5-Day Nigeria Adventure",
     features: "Cool Climate, Rock Formations, and Local Culture",
     price: 510.0,
-    location: "Jos, Plateau, Riyom",
+    destination: "Jos, Plateau, Riyom",
     imgUrl: [
       "/assets/images/sample5.jpg",
       "/assets/images/sample1.jpg",
@@ -750,7 +750,7 @@ export const tours: Tour[] = [
     subtitle: "5-Day Nigeria Adventure",
     features: "Colonial Charm, University Town, and Western Heritage",
     price: 455.0,
-    location: "Ibadan, Oyo, Iseyin",
+    destination: "Ibadan, Oyo, Iseyin",
     imgUrl: [
       "/assets/images/sample7.jpg",
       "/assets/images/sample3.jpg",
@@ -812,7 +812,7 @@ export const tours: Tour[] = [
     subtitle: "5-Day Nigeria Adventure",
     features: "Coal City History, Hills, and Local Culture",
     price: 490.0,
-    location: "Enugu, Nsukka, Awhum",
+    destination: "Enugu, Nsukka, Awhum",
     imgUrl: [
       "/assets/images/sample8.jpg",
       "/assets/images/sample6.jpg",
@@ -873,7 +873,7 @@ export const tours: Tour[] = [
     subtitle: "5-Day Nigeria Adventure",
     features: "Creek Life, Local Cuisine, and Niger-Delta Culture",
     price: 530.0,
-    location: "Warri, Sapele, Ughelli",
+    destination: "Warri, Sapele, Ughelli",
     imgUrl: [
       "/assets/images/sample4.jpg",
       "/assets/images/sample7.jpg",
@@ -935,7 +935,7 @@ export const tours: Tour[] = [
     subtitle: "5-Day Nigeria Adventure",
     features: "Islamic History, Natural Beauty, and Quiet Cities",
     price: 450.0,
-    location: "Ilorin, Esie, Offa",
+    destination: "Ilorin, Esie, Offa",
     imgUrl: [
       "/assets/images/sample2.jpg",
       "/assets/images/sample6.jpg",
@@ -997,7 +997,7 @@ export const tours: Tour[] = [
     subtitle: "5-Day Nigeria Adventure",
     features: "River Life, Farm Tours, and Local Vibes",
     price: 475.0,
-    location: "Makurdi, Gboko, Otukpo",
+    destination: "Makurdi, Gboko, Otukpo",
     imgUrl: [
       "/assets/images/sample5.jpg",
       "/assets/images/sample8.jpg",

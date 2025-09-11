@@ -1,10 +1,18 @@
 import AppSidebar from "@/components/app-sidebar";
+import { auth } from "@/lib/auth";
+import { redirect } from "next/navigation";
 
-export default function HomeLayout({
+export default async function HomeLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const session = await auth();
+
+  if (!session?.user) {
+    redirect("/auth");
+  }
+
   return (
     <div className="flex justify-center min-h-screen">
       <div className="flex relative max-w-screen-2xl w-full">

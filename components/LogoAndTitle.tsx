@@ -3,7 +3,7 @@ import Logo from "@/icons/logo.svg";
 import { cn } from "@/lib/utils";
 
 interface LogoAndTitleProps {
-  collapsed: boolean;
+  collapsed?: boolean;
 }
 
 function LogoAndTitle({ collapsed }: LogoAndTitleProps) {
