@@ -1,25 +1,29 @@
 import { Button } from "@/components/ui/button";
 import React from "react";
 import StatCard from "@/components/StatCard";
-import { stats, tours, trips } from "@/utils/mockdata";
+import { stats, tours } from "@/utils/mockdata";
 import TripsCard from "@/components/TripCard";
 import UserGrowthChart from "@/components/UserGrowthChart";
 import TripTrendsChart from "@/components/TripTrendsChart";
 import LatestUser from "@/components/LatestUser";
 import LatestTrips from "@/components/LatestTrips";
+import { auth } from "@/auth";
+import Header from "@/components/Header";
 
-function Dashboard() {
+async function Dashboard() {
+  const session = await auth();
+
+  if (!session?.user) {
+    return <div>Please sign in to view this page</div>;
+  }
+
+  const name = session.user.name?.split(" ")[0];
   return (
     <div className="space-y-20">
-      <div className="flex justify-between items-center w-full">
-        <div className="flex flex-col items-start gap-1">
-          <h2 className="font-bold text-lg">Welcome Clement 👋</h2>
-          <p className="ash-text">
-            Track activities, trends and popular destinations in real time
-          </p>
-        </div>
-        <Button className="rounded-full">Create a trip</Button>
-      </div>
+      <Header
+        text={`Welcome ${name} 👋`}
+        subtext="Track activities, trends and popular destinations in real time"
+      />
       <ul className="gap-4 lg:gap-6 grid md:grid-cols-2 lg:grid-cols-3">
         {stats.map((stat, index) => {
           return (
@@ -45,12 +49,10 @@ function Dashboard() {
           })}
         </ul>
       </section>
-
       <section className="grid md:grid-cols-2 gap-4 lg:gap-6 items-start">
         <UserGrowthChart />
         <TripTrendsChart />
       </section>
-
       <section className="grid md:grid-cols-2 gap-4 lg:gap-6 items-start">
         <LatestTrips />
         <LatestUser />

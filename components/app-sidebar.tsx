@@ -8,11 +8,16 @@ import Image from "next/image";
 import { useState } from "react";
 import SidebarItem from "./SidebarItem";
 import { cn } from "@/lib/utils";
-import { Switch } from "./ui/switch";
 import { CustomSwitch } from "./CustomSwitch";
 import { Label } from "./ui/label";
+import { User } from "next-auth";
+import { signOut } from "next-auth/react";
 
-export function AppSidebar() {
+interface AppSidebarProps {
+  user?: User;
+}
+
+export function AppSidebar({ user }: AppSidebarProps) {
   const pathname = usePathname();
   const [collapsed, setCollapsed] = useState(true);
   const [pinned, setPinned] = useState(false);
@@ -86,6 +91,7 @@ export function AppSidebar() {
             )}
           >
             <button
+              onClick={() => signOut()}
               className={cn(
                 "flex p-2 items-center hover:cursor-pointer hover:bg-[#f9fbfc] hover:rounded-lg hover:shadow-2xs transition-all duration-300",
                 collapsed ? "justify-center" : "gap-2 justify-start"
@@ -93,7 +99,7 @@ export function AppSidebar() {
             >
               <div className="h-10 w-10">
                 <Image
-                  src="/assets/images/profilepic.jpg"
+                  src={user?.image ?? "/assets/images/profilepic.jpg"}
                   width={50}
                   height={50}
                   priority
@@ -109,10 +115,8 @@ export function AppSidebar() {
                 )}
               >
                 <div className="flex flex-col items-start">
-                  <h4 className="font-semibold text-sm">Clement Ojiguo</h4>
-                  <p className="text-xs ash-text font-medium">
-                    dummy@gmail.com
-                  </p>
+                  <h4 className="font-semibold text-sm">{user?.name}</h4>
+                  <p className="text-xs ash-text font-medium">{user?.email}</p>
                 </div>
                 <LogoutIcon />
               </div>
