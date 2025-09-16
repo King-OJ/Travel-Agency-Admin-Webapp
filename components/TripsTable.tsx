@@ -12,10 +12,10 @@ function TripsTable({
   endIndex: number;
 }) {
   return (
-    <ul className="gap-4 lg:gap-6 grid md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 pb-10">
+    <ul className="gap-4 lg:gap-6 grid  md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 pb-10">
       {tours.slice(startIndex, endIndex).map((trip) => {
         return (
-          <li key={trip.id}>
+          <li key={trip.id} className="h-full">
             <TripCard tour={trip} />
           </li>
         );

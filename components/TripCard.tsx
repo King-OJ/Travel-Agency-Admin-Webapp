@@ -6,10 +6,10 @@ import { tagStyles } from "@/utils/constants";
 import Link from "next/link";
 
 function TripCard({ tour }: { tour: Tour }) {
-  const { price, imgUrl, title, location, tags, id } = tour;
+  const { price, imgUrl, title, destination, tags, id } = tour;
   return (
     <Link href={`/trips/${id}`}>
-      <div className="shadow-xl overflow-hidden rounded-xl w-full">
+      <div className="shadow-xl overflow-hidden rounded-xl w-full h-full flex flex-col">
         <div className="relative">
           <Image
             alt="location photo"
@@ -25,12 +25,12 @@ function TripCard({ tour }: { tour: Tour }) {
           </div>
         </div>
 
-        <div className="p-4 bg-white">
-          <h4 className="font-bold">{title}</h4>
-          <h6 className="flex font-medium space-x-2 ash-text text-xs mt-1 mb-4">
-            {location}
+        <div className="p-4 bg-white flex flex-col flex-1">
+          <h4 className="font-bold line-clamp-2">{title}</h4>
+          <h6 className="flex font-medium space-x-2 ash-text text-xs mt-2 mb-6 ">
+            {destination}
           </h6>
-          <div className="flex gap-2 flex-wrap">
+          <div className="flex gap-2 flex-wrap mt-auto">
             {tags.map((tag, i) => {
               const style = tagStyles[tag] || {
                 textColor: "text-gray-700",

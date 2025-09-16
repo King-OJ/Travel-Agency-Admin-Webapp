@@ -5,7 +5,7 @@ import { sidebarItems } from "@/utils/constants";
 import { usePathname } from "next/navigation";
 import LogoutIcon from "@/icons/logout.svg";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SidebarItem from "./SidebarItem";
 import { cn } from "@/lib/utils";
 import { CustomSwitch } from "./CustomSwitch";
@@ -34,10 +34,19 @@ export function AppSidebar({ user }: AppSidebarProps) {
     setPinned(value);
     if (value) {
       setCollapsed(false);
+      localStorage.setItem("sidebar-pinned", JSON.stringify(collapsed));
     } else {
       setCollapsed(true);
+      localStorage.setItem("sidebar-pinned", JSON.stringify(collapsed));
     }
   };
+
+  // useEffect(() => {
+  //   const stored = localStorage.getItem("sidebar-pinned");
+  //   if (stored) {
+  //     setCollapsed(JSON.parse(stored));
+  //   }
+  // }, []);
 
   return (
     <aside

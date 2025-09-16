@@ -108,7 +108,7 @@ function TourDetails({ tour }: { tour: Tour }) {
           })}
         </ul>
         <div className="w-full my-10">
-          <Button className="w-full text-base flex items-center font-semibold">
+          <Button className="w-full text-base flex items-center font-semibold rounded-full">
             <span>Pay and join trip</span>{" "}
             <Badge className="bg-white rounded-full text-black font-bold">
               ${price}

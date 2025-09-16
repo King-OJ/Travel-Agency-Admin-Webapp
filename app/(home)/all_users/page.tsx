@@ -8,6 +8,7 @@ function AllUsers() {
       <Header
         text={`Manage Users`}
         subtext="Filter, sort, and access detailed user profiles"
+        ctaText="Add a new user"
       />
 
       <UsersTable />

@@ -11,16 +11,45 @@ import { auth } from "@/auth";
 import Header from "@/components/Header";
 
 async function Dashboard() {
-  const session = await auth();
+  let session;
+  let name = "User";
 
-  if (!session?.user) {
-    return <div>Please sign in to view this page</div>;
+  try {
+    session = await auth();
+
+    if (!session?.user) {
+      return (
+        <div className="flex items-center justify-center min-h-screen">
+          <div className="text-center">
+            <h2 className="text-2xl font-bold mb-4">Please sign in</h2>
+            <p>You need to be authenticated to view this page.</p>
+          </div>
+        </div>
+      );
+    }
+
+    name = session.user.name?.split(" ")[0] || "User";
+  } catch (error) {
+    console.error("Auth error:", error);
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <div className="text-center">
+          <h2 className="text-2xl font-bold mb-4">Database Connection Error</h2>
+          <p className="text-gray-600 mb-4">
+            Unable to connect to the database. Please check your connection.
+          </p>
+          <Button onClick={() => window.location.reload()}>
+            Retry Connection
+          </Button>
+        </div>
+      </div>
+    );
   }
 
-  const name = session.user.name?.split(" ")[0];
   return (
     <div className="space-y-20">
       <Header
+        ctaText="Create a trip"
         text={`Welcome ${name} 👋`}
         subtext="Track activities, trends and popular destinations in real time"
       />

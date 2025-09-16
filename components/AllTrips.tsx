@@ -1,7 +1,5 @@
 "use client";
-import { Button } from "@/components/ui/button";
 import React, { useState } from "react";
-import PlusIcon from "@/icons/plus.svg";
 import TripsTable from "@/components/TripsTable";
 import PaginationBtns from "@/components/PaginationBtns";
 import { tours } from "@/utils/mockdata";
